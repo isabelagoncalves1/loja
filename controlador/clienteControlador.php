@@ -64,4 +64,18 @@ function deletar($idCliente){
 }
 
 
+function editar($idCliente){
+    if (ehPost()){
+        $nome = $_POST["nome"];
+        $email = $_POST["email"];
+        
+        editarCliente($idCliente, $nome, $email));
+        redirecionar("cliente/listarClientes");
+        
+    }else{
+        $dados["cliente"] = pegarClientePorId($idCliente);
+        exibir("paginas/formulariocadastro", $dados);
+    }
+}
+
 
