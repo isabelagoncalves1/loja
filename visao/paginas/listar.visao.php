@@ -16,7 +16,7 @@
             <td class="descr"><?=$cliente['email']?></td>
             <td><a href="./cliente/ver/<?=$cliente['idCliente']?>" class="botao02">Ver</a></td>
             <td><a href="./cliente/deletar/<?=$cliente['idCliente']?>" class="botao02">Deletar</a></td>"
-            <td><a href=".cliente/editar/<?=$cliente['idCliente']?>"Alterar</a></td>
+            <td><a href="./cliente/editar/<?=$cliente['idCliente']?>" class="botao02">Alterar</a></td>"
             
         </tr>
         <?php endforeach; ?>

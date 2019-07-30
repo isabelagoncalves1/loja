@@ -37,3 +37,11 @@ function deletarCategoria($idcategoria) {
     }
     return 'Categoria deletada com sucesso!';
 }
+
+
+function editarCategoria($idcategoria, $descricao){
+    $sql = "UPDATE categoria SET descricao = '$descricao' WHERE idcategoria = $idcategoria";
+    $resultado = mysqli_query($cnx = conn(), $sql);
+    if(!$resultado){die('Erro ao alterar categoria' . mysqli_error($cnx));}
+    return 'Categoria alterada com sucesso!';
+}

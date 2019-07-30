@@ -36,3 +36,19 @@ function deletar($idcategoria){
     redirecionar("categoria/listarcategoria");
 }
 
+function editar($idcategoria){
+    if (ehPost()){
+        $descricao = strip_tags($_POST["descricao"]);
+        
+        echo $descricao;
+        
+        
+        editarCategoria($idcategoria, $descricao);
+         redirecionar("categoria/listarcategoria");
+    }else{
+        
+        $dados["categorias"] = pegarcategoriaPorId($idcategoria);
+        exibir("paginas/categoria", $dados);
+    }
+}
+

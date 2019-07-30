@@ -14,8 +14,8 @@
             <td class="descr"><?=$categoria['descricao']?></td>
           
             <td class="descr"><a href="./categoria/ver/<?=$categoria['idcategoria']?>" class="botao02">Ver</a></td>
-            <td class="descr"><a href="./categoria/deletar/<?=$categoria['idcategoria']?>" class="botao02">Deletar</a></td>"
-            
+            <td class="descr"><a href="./categoria/deletar/<?=$categoria['idcategoria']?>" class="botao02">Deletar</a></td>
+            <td class="descr"><a href="./categoria/editar/<?=$categoria['idcategoria']?>" class="botao02">Alterar</a></td>
             
         </tr>
         <?php endforeach; ?>
