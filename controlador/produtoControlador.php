@@ -1,6 +1,7 @@
 <?php
 
 require_once "modelo/produtoModelo.php";
+require_once "modelo/categoriaModelo.php";
 
 
 function adicionar() {
@@ -22,7 +23,9 @@ function adicionar() {
         
     } else {
     }
-        exibir("paginas/adicionarproduto");
+        
+        $dados["categorias"] = listarc();
+        exibir("paginas/adicionarproduto", $dados);
     
 }
 
@@ -64,3 +67,5 @@ function editar($idProduto){
         exibir("paginas/adicionarproduto");
     }
 }
+
+

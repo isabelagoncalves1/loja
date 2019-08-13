@@ -6,6 +6,6 @@
     <p>Estoque mínimo: <?=$produtos['estoque_minimo']?></p>
     <p>Estoque máximo: <?=$produtos['estoque_maximo']?></p>
  
-   
+    <a href="./carrinho/comprar/<?=$produtos['idProduto']?>" class="botao05">Comprar</a>
     
 
