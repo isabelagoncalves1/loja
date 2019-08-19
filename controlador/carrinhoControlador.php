@@ -1,5 +1,5 @@
 <?php
-
+require_once "modelo/produtoModelo.php";
 
 function comprar($idProduto) {
     
@@ -19,13 +19,26 @@ function comprar($idProduto) {
 
 function ver() {
     if(isset($_SESSION["carrinho"])) {
-    $produtos = $_SESSION["carrinho"];
-         print_r($produtos);
+        $produtos = $_SESSION["carrinho"];
+        
+        $produtosBanco = array();
+        for ($i=1; $i< sizeof($produtos); $i++){
+            $idProduto = $produtos[$i];
+            $produto = pegarprodutoPorId($idProduto);
+            $produtosBanco[] = $produto;
+        }
+        
+       
+        
+        $dados["produtos"] = $produtosBanco;
+        exibir("paginas/carrinho", $dados);
+
     } else {
-    echo "Não existe sessao carrinho!";
-    echo "Carrinho vazio!";
-}
-    //mostra na visao
-    //chamar
+        echo "Não existe sessao carrinho!";
+        echo "Carrinho vazio!";
+    }
+
+        //mostra na visao
+          //chamar
 }
 ?>
