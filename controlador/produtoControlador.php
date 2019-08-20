@@ -50,6 +50,10 @@ function deletar($idProduto){
 
 
 function editar($idProduto){
+    
+    
+    $ola = "mensagem";
+    
     if (ehPost()){
         $idcategoria = strip_tags($_POST["idcategoria"]);
         $preco = strip_tags($_POST["preco"]);
@@ -59,12 +63,14 @@ function editar($idProduto){
         $estoque_minimo = strip_tags($_POST["estoque_minimo"]);
         $estoque_maximo = strip_tags($_POST["estoque_maximo"]);
         
-        editarProduto($idProduto, $nome, $email);
+        editarProduto($idProduto, $idcategoria, $preco, $nome, $descricao, $imagem, $estoque_minimo, $estoque_maximo);
         redirecionar("produto/listarprodutos");
     }else{
         
         $dados["produtos"] = pegarprodutoPorId($idProduto);
-        exibir("paginas/adicionarproduto");
+        $dados["categorias"] = listarc();
+        
+        exibir("paginas/adicionarproduto", $dados);
     }
 }
 

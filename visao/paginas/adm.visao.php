@@ -18,7 +18,7 @@
             <tr>
  
                 <td class="descr"><?= $produto['idProduto'] ?></td>
-                <td class="descr"><?= $produto['nomeproduto'] ?></td>
+                <td class="descr"><?= $produto['nome'] ?></td>
                 <td class="descr"><?= $produto['preco'] ?></td>
                 <td class="descr"><?= $produto['descricao'] ?></td>
                 

@@ -14,7 +14,7 @@ function listarp() {
 
 
 function adicionarProduto($idcategoria, $preco, $nome, $descricao, $imagem, $estoque_minimo, $estoque_maximo){
-    $sql = "INSERT INTO addproduto (idcategoria, preco, nomeproduto, descricao, imagem, estoque_minimo, estoque_maximo) VALUES ('$idcategoria', '$preco', '$nome', '$descricao', '$imagem', '$estoque_minimo', '$estoque_maximo')";
+    $sql = "INSERT INTO addproduto (idcategoria, preco, nome, descricao, imagem, estoque_minimo, estoque_maximo) VALUES ('$idcategoria', '$preco', '$nome', '$descricao', '$imagem', '$estoque_minimo', '$estoque_maximo')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if(!$resultado){die('Erro ao cadastrar produto' . mysqli_error($cnx));}
     return 'Produto cadastrado com sucesso!';
@@ -40,10 +40,13 @@ function deletarProduto($idProduto) {
 }
 
 
-function editarProduto($idProduto, $preco, $nome, $descricao, $imagem, $estoque_minimo, $estoque_maximo){
-    $sql = "UPDATE addproduto SET idcategoria = '$idcategoria', preco = '$preco', nome = '$nome', descricao = '$descricao', imagem = '$imagem', estoque_minimo = '$estoque_minino', estoque_maximo = '$estoque_maximo' WHERE id = $idProduto";
+function editarProduto($idProduto, $idcategoria, $preco, $nome, $descricao, $imagem, $estoque_minimo, $estoque_maximo){
+    $sql = "UPDATE addproduto SET idcategoria = '$idcategoria', preco = '$preco', nome = '$nome', descricao = '$descricao', imagem = '$imagem', estoque_minimo = '$estoque_minimo', estoque_maximo = '$estoque_maximo' WHERE idProduto = $idProduto";
+    
+    echo $sql;
+    
     $resultado = mysqli_query($cnx = conn(), $sql);
-    if(!resultado){die('Erro ao alterar produto' . mysqli_error($cnx));}
+    if(!$resultado){die('Erro ao alterar produto' . mysqli_error($cnx));}
     return 'Produto alterado com sucesso!';
 }
 

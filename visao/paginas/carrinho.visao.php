@@ -1,4 +1,4 @@
-
+<a href="./carrinho/deletar">Apagar Carrinho!</a>
     <div id="titulo">
 
         <h1>Seu carrinho</h1>
@@ -15,7 +15,7 @@
             <?php foreach ($produtos as $produto): ?>
             <div id="foto">
                 <img src="" alt="Produto 1">
-                <p id="desc"><?= $produto['nomeproduto'] ?></p><br></p>
+                <p id="desc"><?= $produto['nome'] ?></p><br></p>
 
                 <div id="qnt">
                     <td class="cart__update-wrapper cart-flex-item text-right">
@@ -28,7 +28,7 @@
 
 
                 <p id="tx1"><?= $produto['preco'] ?></p>
-            
+                <a href="./carrinho/deletar">Apagar</a>         
             </div>
             <?php endforeach; ?>
             <div id="pai2">

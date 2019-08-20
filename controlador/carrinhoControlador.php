@@ -41,4 +41,49 @@ function ver() {
         //mostra na visao
           //chamar
 }
+
+
+
+function deletar(){
+    unset($_SESSION["carrinho"]);
+    session_destroy();
+    redirecionar("carrinho/ver");
+}
+
+
+function removerItem() {
+    
+    
+    $listaIds = $_SESSION["carrinho"];
+    
+   
+    
+    $produtos = array();
+    $produtos[0] = 5;
+    $produtos[1] = 4;
+    $produtos[2] = 2;
+    
+    $idElementoDeleta = 2;
+    
+    
+    for($i=0; $i< count($produtos); $i++) {
+        if($idElementoDeleta == $produtos[$i]){
+            echo "achei!"; 
+            echo "O elemento a deletar é de indice $i"; 
+            //deletar
+            unset($produtos[$i]);
+        }
+    }
+    
+    print_r($produtos);
+    
+    unset($produtos[1]);
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    print_r($produtos);
+    
+    
+}
+
 ?>
