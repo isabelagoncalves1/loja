@@ -4,3 +4,4 @@
 <a class="tt" href="./produto/adicionar/" class="">Cadastrar produto</a>
 <a class="tt" href="./categoria/adicionar/" class="">Cadastrar categoria</a>
 <a class="tt" href="./produto/listarprodutos/" class="">Listar produtos</a>
+<a class="tt" href="./endereco/listarE/" class="">Listar endereços</a>

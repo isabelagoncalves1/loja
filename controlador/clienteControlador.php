@@ -1,9 +1,9 @@
 <?php
 
 require_once "modelo/clienteModelo.php";
+require_once "modelo/enderecoModelo.php";
 
 function cadastrar() {
-    
     $dados = array(); 
     $dados["erroEmail"] = "";
     $dados["erroSenha"] = "";
@@ -17,9 +17,6 @@ function cadastrar() {
         $sexo = strip_tags ($_POST["sexo"]);
         $datan = strip_tags ($_POST["datan"]);
   
-        
-
-       
         if ( ( ! isset( $email ) || ! filter_var( $email, FILTER_VALIDATE_EMAIL )) ) {
 	$dados["erroEmail"] = 'Envie um email válido.';
         }
@@ -53,6 +50,7 @@ function listarClientes() {
 }
 
 function ver($idClient){
+    $dados["enderecos"] = pegarenderecoPorIdCliente($idClient);
     $dados["cliente"] = pegarClientePorId($idClient);
     exibir("paginas/visualizarcliente", $dados);
 }

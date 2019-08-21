@@ -3,7 +3,7 @@
 function listarEndereco() {
     $sql = "select * from endereco";
     $resultado = mysqli_query(conn(), $sql);
-    $produtos = array();
+    $enderecos = array();
     while ($linha = mysqli_fetch_assoc($resultado)) {
         $enderecos[] = $linha;
     }
@@ -11,7 +11,7 @@ function listarEndereco() {
 }
 
 function CadastrarEndereco ($idCliente, $logradouro, $numero, $complemento, $bairro, $cidade, $cep){
-    $sql = "INSERT INTO endereco (idCliente, logradouro, numero, complemento, bairro, cidade, cep) VALUES ('$cpf', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$cep')";
+    $sql = "INSERT INTO endereco (idCliente, logradouro, numero, complemento, bairro, cidade, cep) VALUES ('$idCliente', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$cep')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if(!$resultado){die('Erro ao cadastrar endereço' . mysqli_error($cnx));}
     return 'Endereço cadastrado com sucesso!';
@@ -25,6 +25,16 @@ function pegarenderecoPorId($idendereco){
     return $endereco;
 }
 
+function pegarenderecoPorIdCliente($idCliente){
+    $sql = "SELECT * FROM endereco WHERE idCliente = '$idCliente'";
+
+    $resultado = mysqli_query(conn(), $sql);
+    //$enderecos = mysqli_fetch_assoc($resultado);
+    while ($linha = mysqli_fetch_assoc($resultado)) {
+        $enderecos[] = $linha;
+    }
+    return $enderecos;
+}
 
 function deletarEndereco($idendereco) {
     $sql = "DELETE FROM endereco WHERE idendereco = $idendereco";
@@ -37,7 +47,7 @@ function deletarEndereco($idendereco) {
 
 
 function editarEndereco($idendereco, $idCliente, $logradouro, $numero, $complemento, $bairro, $cidade, $cep){
-    $sql = "UPDATE endereco SET idCliente = '$idCliente', logradouro = '$logradouro', numero = '$numero', complemento = '$complemento', bairro = '$bairro', cidade = '$cidade', cep = '$cep' WHERE idendereco = $idendereco";
+    $sql = "UPDATE endereco SET logradouro = '$logradouro', numero = '$numero', complemento = '$complemento', bairro = '$bairro', cidade = '$cidade', cep = '$cep' WHERE idendereco = '$idendereco'";
     
     echo $sql;
     
