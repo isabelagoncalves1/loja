@@ -83,4 +83,17 @@ CREATE TABLE addproduto(
     primary key(idProduto)
 );
 
+CREATE TABLE endereco(
+    idendereco INT(11) not null auto_increment,
+    idCliente integer not null
+    logradouro varchar(60) not null,
+    numero varchar(7) not null,
+    complemento varchar(60) not null,
+    bairro varchar(60) not null,
+    cidade varchar(60) not null,
+    cep varchar(60),
+    foreign key (idCliente) references cadastrocliente (idCliente) on delete cascade on update cascade,
+    primary key(idCliente)
+);
+
 
