@@ -25,7 +25,7 @@
 
                     </div>
                     <div class="item">
-                        <a href=""><img class="i1" src="./publico/FOTOS/carrinho.png" alt="ícone2"></a>
+                        <a href="./carrinho/ver"><img class="i1" src="./publico/FOTOS/carrinho.png" alt="ícone2"></a>
 
                     </div>
                 </section>

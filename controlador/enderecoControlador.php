@@ -3,7 +3,7 @@
 require_once "modelo/enderecoModelo.php";
 require_once "modelo/clienteModelo.php";
 
-function cadastrar($idCliente) {
+function cadastrar() {
     $dados = array();
     if (ehPost()) {
         $logradouro = strip_tags($_POST["logradouro"]);

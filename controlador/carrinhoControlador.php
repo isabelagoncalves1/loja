@@ -21,8 +21,11 @@ function ver() {
     if(isset($_SESSION["carrinho"])) {
         $produtos = $_SESSION["carrinho"];
         
+        echo "ja existe!";
+        print_r($produtos);
+        
         $produtosBanco = array();
-        for ($i=1; $i< sizeof($produtos); $i++){
+        for ($i=1; $i<sizeof($produtos); $i++){
             $idProduto = $produtos[$i];
             $produto = pegarprodutoPorId($idProduto);
             $produtosBanco[] = $produto;
