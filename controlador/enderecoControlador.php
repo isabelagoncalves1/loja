@@ -3,7 +3,7 @@
 require_once "modelo/enderecoModelo.php";
 require_once "modelo/clienteModelo.php";
 
-function cadastrar() {
+function cadastrar($idCliente) {
     $dados = array();
     if (ehPost()) {
         $logradouro = strip_tags($_POST["logradouro"]);
@@ -39,10 +39,10 @@ function deletar($idendereco) {
     redirecionar("endereco/listarE");
 }
 
-function editar($idendereco) {
+function editar($idendereco, $idCliente) {
 
 
-  
+  $dados = array();
 
     if (ehPost()) {
         $idCliente = strip_tags($_POST["idCliente"]);
@@ -54,12 +54,16 @@ function editar($idendereco) {
         $cep = strip_tags($_POST["cep"]);
 
         editarEndereco($idendereco, $idCliente, $logradouro, $numero, $complemento, $bairro, $cidade, $cep);
-        redirecionar("endereco/listarE");
-    } else {
+        echo $idCliente;
+        die();
+        
+        redirecionar("cliente/ver/$idCliente");
 
+        
+        
+    } else {
         $dados["enderecos"] = pegarenderecoPorId($idendereco);
         $dados["clientes"] = pegarTodosClientes();
-
         exibir("paginas/adicionarendereco", $dados);
     }
 }

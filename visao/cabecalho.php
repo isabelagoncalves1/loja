@@ -5,11 +5,11 @@
             <div id="cabecalho"> 
             </div>
 
-
+            
             <div id="busca">
                 <a href="http://textfaces.wtf/"></a><p></p>
-                <form>
-                    <input type="search" placeholder="Estou procurando por...">
+                <form action="<?php echo $_SERVER['PHP_SELF'] ?>?a=buscar" >
+                    <input type="search" name="palavra" placeholder="Estou procurando por...">
                 </form>
             </div>
 

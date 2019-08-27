@@ -49,9 +49,9 @@ function listarClientes() {
     exibir("paginas/listar", $dados);
 }
 
-function ver($idClient){
-    $dados["enderecos"] = pegarenderecoPorIdCliente($idClient);
-    $dados["cliente"] = pegarClientePorId($idClient);
+function ver($idCliente){
+    $dados["enderecos"] = pegarenderecoPorIdCliente($idCliente);
+    $dados["cliente"] = pegarClientePorId($idCliente);
     exibir("paginas/visualizarcliente", $dados);
 }
 

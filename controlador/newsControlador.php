@@ -28,3 +28,36 @@ function addnews() {
         
      exibir("paginas/news", $dados);
 }
+
+function listarnews(){
+    $dados = array();
+    $dados["news"] = listarnew();
+    exibir("paginas/listarnews", $dados);
+    
+}
+
+function ver($idnews){
+    $dados["news"] = pegarnewsPorId($idnews);
+    exibir("paginas/visualizarnews", $dados);
+}
+
+function deletar($idnews){
+    $msg = deletarNews($idnews);    
+    redirecionar("news/listarnews");
+}
+
+function editar($idnews){
+    if (ehPost()){
+        $nome = strip_tags($_POST["nome"]);
+        $email = strip_tags($_POST["email"]);
+        
+        
+        
+        editarNews($idnews, $nome, $email);
+         redirecionar("news/listarnews");
+    }else{
+        
+        $dados["news"] = pegarnewsPorId($idnews);
+        exibir("paginas/categoria", $dados);
+    }
+}

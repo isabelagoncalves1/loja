@@ -10,7 +10,7 @@ function listarEndereco() {
     return $enderecos;
 }
 
-function CadastrarEndereco ( $logradouro, $numero, $complemento, $bairro, $cidade, $cep){
+function CadastrarEndereco ($idCliente, $logradouro, $numero, $complemento, $bairro, $cidade, $cep){
     $sql = "INSERT INTO endereco (idCliente, logradouro, numero, complemento, bairro, cidade, cep) VALUES ('$idCliente', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$cep')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if(!$resultado){die('Erro ao cadastrar endereço' . mysqli_error($cnx));}
@@ -30,6 +30,8 @@ function pegarenderecoPorIdCliente($idCliente){
 
     $resultado = mysqli_query(conn(), $sql);
     //$enderecos = mysqli_fetch_assoc($resultado);
+    $enderecos = array();
+    
     while ($linha = mysqli_fetch_assoc($resultado)) {
         $enderecos[] = $linha;
     }
