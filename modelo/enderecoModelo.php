@@ -49,7 +49,14 @@ function deletarEndereco($idendereco) {
 
 
 function editarEndereco($idendereco, $idCliente, $logradouro, $numero, $complemento, $bairro, $cidade, $cep){
-    $sql = "UPDATE endereco SET logradouro = '$logradouro', numero = '$numero', complemento = '$complemento', bairro = '$bairro', cidade = '$cidade', cep = '$cep' WHERE idendereco = '$idendereco'";
+    $sql = "UPDATE endereco SET "
+            . "logradouro = '$logradouro', "
+            . "numero = '$numero', "
+            . "complemento = '$complemento', "
+            . "bairro = '$bairro', "
+            . "cidade = '$cidade', "
+            . "cep = '$cep' "
+            . "WHERE idendereco = '$idendereco' AND idCliente = '$idCliente'";
     
     echo $sql;
     

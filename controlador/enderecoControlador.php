@@ -39,13 +39,13 @@ function deletar($idendereco) {
     redirecionar("endereco/listarE");
 }
 
-function editar($idendereco, $idCliente) {
+function editar($idCliente, $idendereco) {
 
 
-  $dados = array();
+    $dados = array();
 
     if (ehPost()) {
-        $idCliente = strip_tags($_POST["idCliente"]);
+
         $logradouro = strip_tags($_POST["logradouro"]);
         $numero = strip_tags($_POST["numero"]);
         $complemento = strip_tags($_POST["complemento"]);
@@ -54,13 +54,8 @@ function editar($idendereco, $idCliente) {
         $cep = strip_tags($_POST["cep"]);
 
         editarEndereco($idendereco, $idCliente, $logradouro, $numero, $complemento, $bairro, $cidade, $cep);
-        echo $idCliente;
-        die();
-        
-        redirecionar("cliente/ver/$idCliente");
 
-        
-        
+        redirecionar("cliente/ver/$idCliente");
     } else {
         $dados["enderecos"] = pegarenderecoPorId($idendereco);
         $dados["clientes"] = pegarTodosClientes();

@@ -58,15 +58,9 @@ function removerItem() {
     
     
     $listaIds = $_SESSION["carrinho"];
-    
    
     
-    $produtos = array();
-    $produtos[0] = 5;
-    $produtos[1] = 4;
-    $produtos[2] = 2;
-    
-    $idElementoDeleta = 2;
+ 
     
     
     for($i=0; $i< count($produtos); $i++) {

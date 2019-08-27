@@ -8,8 +8,8 @@
             
             <div id="busca">
                 <a href="http://textfaces.wtf/"></a><p></p>
-                <form action="<?php echo $_SERVER['PHP_SELF'] ?>?a=buscar" >
-                    <input type="search" name="palavra" placeholder="Estou procurando por...">
+                <form action="produto/buscar" method="POST">
+                    <input type="search" name="busca">
                 </form>
             </div>
 

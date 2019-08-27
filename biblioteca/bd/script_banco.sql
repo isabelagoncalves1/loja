@@ -75,7 +75,7 @@ CREATE TABLE addproduto(
     preco double not null,
     nome varchar(100) not null,
     descricao varchar(200) not null,
-    imagem varchar(60) not null,
+    imagem varchar(200) not null,
     estoque_minimo int(11) not null,
     estoque_maximo int(11) not null,
     

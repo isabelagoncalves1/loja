@@ -1,20 +1,20 @@
 <a href="./carrinho/deletar">Apagar Carrinho!</a>
-    <div id="titulo">
+<div id="titulo">
 
-        <h1>Seu carrinho</h1>
-    </div>
-    <div id="blocao">
-        <div id="bloco">
-            <div id="pai">
-                <div id="info" style="margin-top: 30px;">
-                    <h6 id="pe1">Produtos</h6>
-                    <h6 id="pe2">Quantidade</h6>
-                    <h6 id="pe3">Valor total</h6>
-                </div>
+    <h1>Seu carrinho</h1>
+</div>
+<div id="blocao">
+    <div id="bloco">
+        <div id="pai">
+            <div id="info" style="margin-top: 30px;">
+                <h6 id="pe1">Produtos</h6>
+                <h6 id="pe2">Quantidade</h6>
+                <h6 id="pe3">Valor total</h6>
             </div>
-            <?php foreach ($produtos as $produto): ?>
+        </div>
+        <?php foreach ($produtos as $produto): ?>
             <div id="foto">
-                <img src="" alt="Produto 1">
+                <img src="<?= $produto['imagem'] ?>" alt="Produto 1">
                 <p id="desc"><?= $produto['nome'] ?></p><br></p>
 
                 <div id="qnt">
@@ -30,27 +30,27 @@
                 <p id="tx1"><?= $produto['preco'] ?></p>
                 <a href="./carrinho/deletar">Apagar</a>         
             </div>
-            <?php endforeach; ?>
-            <div id="pai2">
-                <div id="desconto">
-                    <h6>CUPOM DE DESCONTO</h6>
-                    <p>Informe aqui seu cupom promocional.</p>
+        <?php endforeach; ?>
+        <div id="pai2">
+            <div id="desconto">
+                <h6>CUPOM DE DESCONTO</h6>
+                <p>Informe aqui seu cupom promocional.</p>
+                <form>
+                    <input type="text" placeholder=""/>
+                </form>
+            </div>
+            <div id="paicep">
+                <div id="cep">
+                    <p>Digite o CEP</p>
                     <form>
                         <input type="text" placeholder=""/>
                     </form>
                 </div>
-                <div id="paicep">
-                    <div id="cep">
-                        <p>Digite o CEP</p>
-                        <form>
-                            <input type="text" placeholder=""/>
-                        </form>
-                    </div>
-                    <div class="contentt">
-                        <a href="index.html" class="botao02">FINALIZAR PEDIDO</a>
-                    </div>
+                <div class="contentt">
+                    <a href="index.html" class="botao02">FINALIZAR PEDIDO</a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
