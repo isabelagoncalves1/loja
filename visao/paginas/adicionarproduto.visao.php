@@ -11,7 +11,7 @@
             <p>Estoque máximo:</p> <input type="text" name="estoque_maximo" value="<?= @$produtos['estoque_maximo'] ?>">
 
 
-            <?php print_r($categorias); ?>
+           
 
             <select name="idcategoria">
                 <option value="">Descricao</option>

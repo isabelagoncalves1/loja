@@ -16,7 +16,7 @@
             <div id="logo">
                 <a href="./index/listarproduto"><img id="logao" src="./publico/FOTOS/90s.png" alt="Logão"></a>
             </div>
-<a class="tt" href="./cliente/cadastrar/" class="">
+            <a class="tt" href="./cliente/cadastrar/" class="">
 
             <div id="icones">
                 <section class="container flex-end">

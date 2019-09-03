@@ -97,3 +97,8 @@ CREATE TABLE endereco(
 );
 
 
+CREATE TABLE formapagamento(
+    idFormaP int not null auto_increment,
+    descricao varchar(50) not null,
+    primary key(idFormaP)
+);

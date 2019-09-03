@@ -1375,11 +1375,9 @@ h1#h1f{
 #h1inicial{
     font-size: 60px;
     text-align: center;
+  
 }
-.tt{
-    font-size: 50px;
-    margin-left: 100px;
-}
+
 
 
 
@@ -1514,5 +1512,8 @@ h1#h1f{
 }
 
 
-
+.lista{
+    font-size: 40px;
+    margin-left: 10%;
+}
 
