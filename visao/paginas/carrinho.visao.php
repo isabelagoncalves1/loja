@@ -1,4 +1,4 @@
-<a href="./carrinho/deletar">Apagar Carrinho!</a>
+
 <div id="titulo">
 
     <h1>Seu carrinho</h1>
@@ -28,7 +28,7 @@
 
 
                 <p id="tx1"><?= $produto['preco'] ?></p>
-                <a href="./carrinho/deletar">Apagar</a>         
+                        
             </div>
         <?php endforeach; ?>
         <div id="pai2">
@@ -48,6 +48,8 @@
                 </div>
                 <div class="contentt">
                     <a href="index.html" class="botao02">FINALIZAR PEDIDO</a>
+                    <a href="./carrinho/deletar" class="botao02">APAGAR CARRINHO</a>
+                    
                 </div>
             </div>
         </div>

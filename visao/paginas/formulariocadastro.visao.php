@@ -5,7 +5,8 @@
 
 <form action="" method="POST" style="border-bottom: 1px solid #c2e3de;margin-bottom: 20px;border-top: 1px solid #c2e3de;margin-top: 20px;">
     <div id="form">
-        <div id="formao"> 
+        <div id="formao">
+          
             <p>Email:</p> <input type="text" name="email" value="<?=@$cliente['email']?>">
             <p class="errop"><?php echo $erroEmail; ?></p>
 

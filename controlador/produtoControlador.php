@@ -64,9 +64,12 @@ function editar($idProduto) {
         $preco = strip_tags($_POST["preco"]);
         $nome = strip_tags($_POST["nome"]);
         $descricao = strip_tags($_POST["descricao"]);
-        $imagem = strip_tags($_POST["imagem"]);
         $estoque_minimo = strip_tags($_POST["estoque_minimo"]);
         $estoque_maximo = strip_tags($_POST["estoque_maximo"]);
+        
+        $tmp_name_imagem = $_FILES["imagem"]["tmp_name"];
+        $name_imagem = $_FILES["imagem"]["name"];
+        $imagem = uploadImagem($tmp_name_imagem, $name_imagem);
 
         editarProduto($idProduto, $idcategoria, $preco, $nome, $descricao, $imagem, $estoque_minimo, $estoque_maximo);
         redirecionar("produto/listarprodutos");

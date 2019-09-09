@@ -1,5 +1,6 @@
 <form  method="POST" action="">
-        <div id="divaoadd">
+        <div id="form">
+            <div id="formao2">
             
                 <h1>Adicionar categoria</h1>
             <div id="divadd">
@@ -8,5 +9,6 @@
                
                 <button type="submit" class="botao05" >Entrar</button>
             </div>
+        </div>
         </div>
     </form>
