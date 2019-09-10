@@ -4,14 +4,14 @@
 <table class="table">
         <thead>
             <tr>
-                <th class="prod">ID</th>
+                
                 <th class="prod">NOME</th>
-                <th class="prod">EMAIL</th>
+                
                 
         </thead>
         <?php foreach ($clientes as $cliente): ?>
         <tr>
-            <td class="descr"><?=$cliente['idCliente']?></td>
+            
             <td class="descr"><?=$cliente['nome']?></td>
             <td class="descr"><?=$cliente['email']?></td>
             <td><a href="./cliente/ver/<?=$cliente['idCliente']?>" class="botao02">Ver</a></td>

@@ -102,3 +102,11 @@ CREATE TABLE formapagamento(
     descricao varchar(50) not null,
     primary key(idFormaP)
 );
+
+CREATE TABLE IF NOT EXISTS cupom(
+    idcupom INT(11) NOT NULL AUTO_INCREMENT,
+    nomecupom VARCHAR(60) NOT NULL,
+    desconto INT(11) NOT NULL,
+    PRIMARY KEY(idcupom)
+);
+

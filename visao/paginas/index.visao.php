@@ -2,6 +2,8 @@
 <ul id="cssdalista">
     <li><a class="lista" href="./cliente/cadastrar/" class="">Cadastro</a></li>
     <li><a class="lista" href="./acesso/loginCliente/" class="">Login</a></li>
+    <li><a class="lista" href="./cupom/adicionar/" class="">Adicionar cupom</a></li>
+    <li><a class="lista" href="./FormaPagamento/adicionar/" class="">Adicionar forma de pagamento</a></li>
     <li> <a class="lista" href="./produto/adicionar/" class="">Cadastrar produto</a></li>
     <li> <a class="lista" href="./categoria/adicionar/" class="">Cadastrar categoria</a></li>
     <li> <a class="lista" href="./produto/listarprodutos/" class="">Listar produtos</a></li>

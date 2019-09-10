@@ -330,6 +330,7 @@ a {
 
 .p1{
     font-family: 'Antic', sans-serif;
+    font-size: 17px;
    
 
 }
@@ -497,6 +498,13 @@ a {
 }
 .table{
     text-align: center;
+    border-top: 1px solid #c3e2de;
+    border-bottom: 1px solid #c3e2de;
+}
+
+.table2{
+    width: 100%;
+    margin-top: 30px;
 }
 .cad label{
     padding-left: 8px !important;
@@ -828,12 +836,12 @@ a {
 
 }
 
-#paicarac{
-    width: 700px;
+#caracte2 h2{
+    text-align: center;
 }
 
 #caracte2{
-    width: 345px;
+   
     margin-left: 120px;
 }
 #cep{
@@ -1496,7 +1504,7 @@ h1#h1f{
     margin-left: 40%;
 }
 .prod{
-    border-top: 1px solid #c3e2de;
+    
     margin-top: 39px;
     width: 500px;
     font-size: 20px;
@@ -1513,7 +1521,7 @@ h1#h1f{
 
 #tudo2 h2{
     margin-left: 450px;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 
