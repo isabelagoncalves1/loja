@@ -28,7 +28,7 @@
 
 
                 <p id="tx1"><?= $produto['preco'] ?></p>
-                        
+
             </div>
         <?php endforeach; ?>
         <div id="pai2">
@@ -42,14 +42,15 @@
             <div id="paicep">
                 <div id="cep">
                     <p>Digite o CEP</p>
-                    <form>
-                        <input type="text" placeholder=""/>
+                    <form method="POST" action="carrinho/ver">
+                        <input name="cep" type="text" maxlength="10" value="<?= @$frete ?>">
+                        <button>OK</button>
                     </form>
                 </div>
                 <div class="contentt">
                     <a href="index.html" class="botao02">FINALIZAR PEDIDO</a>
                     <a href="./carrinho/deletar" class="botao02">APAGAR CARRINHO</a>
-                    
+
                 </div>
             </div>
         </div>
