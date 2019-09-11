@@ -51,7 +51,7 @@ function ver() { # listarCarrinho
         
         $valor = [];
         // 
-        //$dados["frete"] = calcular_frete(18214558,18208847,2,$valor,40010,6,20,20);
+        $dados["frete"] = calcular_frete(18214558,18208847,2,25,40010,6,20,20);
         exibir("paginas/carrinho", $dados);
     } else {
         echo "Não existe sessao carrinho!";
