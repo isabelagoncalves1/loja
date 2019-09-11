@@ -34,6 +34,7 @@ function verificarProduto($vetor, $produto){
 }
 
 function ver() { # listarCarrinho
+
     if (isset($_SESSION["carrinho"])) {
         $produtos = $_SESSION["carrinho"];
 
@@ -48,10 +49,11 @@ function ver() { # listarCarrinho
         }
 
         $dados["produtos"] = $produtosBanco;
-        
-        $valor = [];
-        // 
-        $dados["frete"] = calcular_frete(18214558,18208847,2,25,40010,6,20,20);
+
+        $dados['subtotal'] = $subtotal;
+        $dados['total'] = $cep + $subtotal;
+//        $dados["cep"] = calcular_frete(18214558,$cep,$total,25,40010,6,20,20);
+        $dados["cep"] = calcular_frete(18214558,$cep,20,$subtotal,40010,6,20,20);
         exibir("paginas/carrinho", $dados);
     } else {
         echo "Não existe sessao carrinho!";

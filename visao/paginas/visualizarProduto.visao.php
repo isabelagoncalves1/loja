@@ -12,6 +12,7 @@
                     <p class="p1">Descrição: <?= $produtos['descricao'] ?></p>
                     <p class="p1">Estoque mínimo: <?= $produtos['estoque_minimo'] ?></p>
                     <p class="p1">Estoque máximo: <?= $produtos['estoque_maximo'] ?></p>
+                    <p class="p1">Quantidade do estoque: <?= $produtos['quant_estoque'] ?></p>
 
                     <a href="./carrinho/comprar/<?= $produtos['idProduto'] ?>" class="botao05">Comprar</a>
                 </div>

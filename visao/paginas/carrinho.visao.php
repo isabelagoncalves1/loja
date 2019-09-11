@@ -31,6 +31,9 @@
 
             </div>
         <?php endforeach; ?>
+        <h3>Subtotal: <?= $subtotal ?></h3>
+        <h3>Total: <?= $total ?></h3>
+        
         <div id="pai2">
             <div id="desconto">
                 <h6>CUPOM DE DESCONTO</h6>
@@ -43,11 +46,12 @@
                 <div id="cep">
                     <p>Digite o CEP</p>
                     <form method="POST" action="carrinho/ver">
-                        <input name="cep" type="text" maxlength="10" value="<?= @$frete ?>">
+                        <input name="cep" type="text" maxlength="10">
 
                         <button class="botao01">OK</button>
 
                     </form>
+                    <p><?= @$cep ?></p>
                 </div>
             </div>
             <div class="contentt">

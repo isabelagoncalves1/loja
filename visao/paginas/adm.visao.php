@@ -1,5 +1,5 @@
 <div id="tudo2">
-    <h2>Seção Administrador</h2>
+    <h2>Produtos</h2>
     <table class="table">
         <thead>
 
