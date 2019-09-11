@@ -34,9 +34,9 @@ function ver($idendereco) {
     exibir("paginas/visualizarEndereco", $dados);
 }
 
-function deletar($idendereco) {
+function deletar($idendereco, $idCliente) {
     $msg = deletarEndereco($idendereco);
-    redirecionar("endereco/listarE");
+    redirecionar("cliente/ver/$idCliente");
 }
 
 function editar($idCliente, $idendereco) {

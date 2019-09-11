@@ -44,15 +44,18 @@
                     <p>Digite o CEP</p>
                     <form method="POST" action="carrinho/ver">
                         <input name="cep" type="text" maxlength="10" value="<?= @$frete ?>">
-                        <button>OK</button>
+
+                        <button class="botao01">OK</button>
+
                     </form>
                 </div>
-                <div class="contentt">
-                    <a href="index.html" class="botao02">FINALIZAR PEDIDO</a>
-                    <a href="./carrinho/deletar" class="botao02">APAGAR CARRINHO</a>
-
-                </div>
             </div>
+            <div class="contentt">
+                <a href="index.html" class="botao02">FINALIZAR PEDIDO</a>
+                <a href="./carrinho/deletar" class="botao02">APAGAR CARRINHO</a>
+
+            </div>
+
         </div>
     </div>
 </div>
