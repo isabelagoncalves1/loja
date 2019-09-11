@@ -53,6 +53,7 @@ CREATE TABLE addproduto(
     imagem varchar(200) not null,
     estoque_minimo int(11) not null,
     estoque_maximo int(11) not null,
+    quant_estoque integer not null,
     
     foreign key (idcategoria) references categoria (idcategoria) on delete cascade on update cascade,
     primary key(idProduto)

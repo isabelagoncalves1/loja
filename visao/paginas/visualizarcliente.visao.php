@@ -50,7 +50,7 @@
                             <thead>
                                 <tr>
                                     <td class="descr"><a href="./endereco/ver/<?= $endereco['idendereco'] ?>" class="botao02">Ver</a></td>
-                                    <td class="descr"><a href="./endereco/deletar/<?= $endereco['idendereco'] ?>" class="botao02">Deletar</a></td>
+                                    <td class="descr"><a href="./endereco/deletar/<?= $endereco['idendereco'] ?>/<?= $cliente['idCliente'] ?>" class="botao02">Deletar</a></td>
                                     <td class="descr"><a href="./endereco/editar/<?= $cliente['idCliente'] ?>/<?= $endereco['idendereco'] ?>" class="botao02">Alterar</a></td>
 
                                 </tr>

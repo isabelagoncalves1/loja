@@ -10,6 +10,7 @@
                 <p>Imagem:</p> <input type="file" name="imagem" value="<?= @$produtos['imagem'] ?>">
                 <p>Estoque mínimo:</p> <input type="text" name="estoque_minimo" value="<?= @$produtos['estoque_minimo'] ?>">
                 <p>Estoque máximo:</p> <input type="text" name="estoque_maximo" value="<?= @$produtos['estoque_maximo'] ?>">
+                <p>Quantidade do estoque:</p> <input type="text" name="quant_estoque" value="<?= @$produtos['quant_estoque'] ?>">
 
 
 
