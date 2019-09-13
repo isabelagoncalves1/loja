@@ -50,10 +50,10 @@ function ver() { # listarCarrinho
 
         $dados["produtos"] = $produtosBanco;
 
-        $dados['subtotal'] = $subtotal;
-        $dados['total'] = $cep + $subtotal;
+        //$dados['subtotal'] = $subtotal;
+        //$dados['total'] = $cep + $subtotal;
 //        $dados["cep"] = calcular_frete(18214558,$cep,$total,25,40010,6,20,20);
-        $dados["cep"] = calcular_frete(18214558,$cep,20,$subtotal,40010,6,20,20);
+        //$dados["cep"] = calcular_frete(18214558,$cep,20,$subtotal,40010,6,20,20);
         exibir("paginas/carrinho", $dados);
     } else {
         echo "Não existe sessao carrinho!";

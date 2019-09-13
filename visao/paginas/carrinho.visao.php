@@ -31,8 +31,7 @@
 
             </div>
         <?php endforeach; ?>
-        <h3>Subtotal: <?= $subtotal ?></h3>
-        <h3>Total: <?= $total ?></h3>
+       
         
         <div id="pai2">
             <div id="desconto">
@@ -51,7 +50,7 @@
                         <button class="botao01">OK</button>
 
                     </form>
-                    <p><?= @$cep ?></p>
+                   
                 </div>
             </div>
             <div class="contentt">
