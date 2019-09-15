@@ -5,8 +5,8 @@
     <div id="form">
         <div id="formao2">
 
-            <p>Nome:</p> <input type="text" name="nomecupom" value="<?= @$cupons['nomecupom'] ?>">
-            <p>Desconto:</p> <input type="text" name="desconto" value="<?= @$cupons['desconto'] ?>">
+            <p>Nome:</p> <input type="text" name="nomecupom" value="<?= @$cupom['nomecupom'] ?>">
+            <p>Desconto:</p> <input type="text" name="desconto" value="<?= @$cupom['desconto'] ?>">
             <button type="submit" class="botao05">Cadastrar</button>
         </div>
     </div>
