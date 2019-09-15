@@ -12,10 +12,10 @@
                 <h6 id="pe3">Valor total</h6>
             </div>
         </div>
-        <?php foreach ($produtos as $produto): ?>
+        <?php foreach ($produto as $produtos): ?>
             <div id="foto">
-                <img src="<?= $produto['imagem'] ?>" alt="Produto 1">
-                <p id="desc"><?= $produto['nome'] ?></p><br></p>
+                <img src="<?= $produtos['imagem'] ?>" alt="Produto 1">
+                <p id="desc"><?= $produtos['nome'] ?></p><br></p>
 
                 <div id="qnt">
                     <td class="cart__update-wrapper cart-flex-item text-right">
@@ -27,7 +27,7 @@
                 </div>
 
 
-                <p id="tx1"><?= $produto['preco'] ?></p>
+                <p id="tx1"><?= $produtos['preco'] ?></p>
 
             </div>
         <?php endforeach; ?>
