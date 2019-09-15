@@ -1,43 +1,46 @@
-
 <?php
-function adicionarCupom($nomecupom, $desconto) {
-    $sql = "INSERT INTO cupom(idcupom, nomecupom, desconto) VALUES(NULL,'$nomecupom','$desconto')";
-    $resultado = mysqli_query($cnx = conn(), $sql);
-    
-    if (!$resultado) {
-        die('Erro ao cadastrar cupom' . mysqli_error($cnx));
+function adicionarcupom($nomecupom, $desconto){
+    $comando= "insert into cupom (nomecupom, desconto) "
+            . "values ('$nomecupom', '$desconto');";
+    $cnx= conn();
+    $resul= mysqli_query($cnx, $comando);
+    if(!$resul){
+        die(mysqli_error($cnx));
     }
-    return 'Cupom cadastrado com sucesso!';
+    return "Cupom cadastrado com sucesso!";
 }
-function pegarTodosCupons() {
-    $sql = "SELECT * FROM cupom";
-    $resultado = mysqli_query(conn(), $sql);
+function pegarTodosCupons(){
+    $comando= "select * from cupom";
+    $cnx= conn();
+    $resul= mysqli_query($cnx, $comando);
     $cupons = array();
-    while ($linha = mysqli_fetch_assoc($resultado)) {
-        $cupons[] = $linha;
+    while ($cupom = mysqli_fetch_assoc($resul)){
+        $cupons[]=$cupom; 
     }
     return $cupons;
 }
-function pegarCupomPorId($idcupom) {
-    $sql = "SELECT * FROM cupom WHERE idcupom = $idcupom";
-    $resultado = mysqli_query(conn(), $sql);
-    $cupom = mysqli_fetch_assoc($resultado);
+function pegarCupomId($id){
+    $comando="select * from cupom where idcupom= $id;";
+    $cnx= conn();
+    $resul= mysqli_query($cnx, $comando);
+    $cupom= mysqli_fetch_assoc($resul);
     return $cupom;
 }
-function deletarCupom($idcupom) {
-    $sql = "DELETE FROM cupom WHERE idcupom = $idcupom";
-    $resultado = mysqli_query($cnx = conn(), $sql);
-    if (!$resultado) {
-        die('Erro ao deletar cupom' . mysqli_error($cnx));
+function deletarCupom($id){
+    $comando= "delete from cupom where idcupom=$id;";
+    $cnx= conn();
+    $resul= mysqli_query($cnx, $comando);
+    if(!$resul){
+        die(mysqli_error($cnx));
     }
-    return 'Cupom deletado com sucesso!';
+    return "Cupom deletada";
 }
-function editarCupom($idcupom, $nomecupom, $desconto) {
-    $sql = "UPDATE cupom SET nomecupom = '$nomecupom', desconto = '$desconto' WHERE idcupom = $idcupom";
-    $resultado = mysqli_query($cnx = conn(), $sql);
-    if (!$resultado) {
-        die('Erro ao alterar cupom' . mysqli_error($cnx));
+function editarcupom($id, $nomecupom, $desconto){
+    $comando="update cupom set nomecupom='$nomecupom', desconto='$desconto' where idcupom='$id';";
+    $cnx= conn();
+    $resul= mysqli_query($cnx, $comando);
+    if(!$resul){
+        die(mysqli_error($cnx));
     }
-    return 'Cupom alterado com sucesso!';
+    return "Dados atualizados com sucesso!";
 }
-?>
