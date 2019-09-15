@@ -44,8 +44,8 @@ function listarprodutos() {
     exibir("paginas/adm", $dados);
 }
 
-function ver($idProduto) {
-    $dados["produtos"] = pegarprodutoPorId($idProduto);
+function ver($id) {
+    $dados["produtos"] = pegarProdutoId($id);
     exibir("paginas/visualizarProduto", $dados);
 }
 
