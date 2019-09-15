@@ -22,16 +22,16 @@ function listarCupom() {
     $dados["cupons"] = pegarTodosCupons();
     exibir("cupom/listarcupom", $dados);
 }
-function ver($id) {
-    $dados["cupom"] = pegarCupomPorId($id);
+function ver($idcupom) {
+    $dados["cupons"] = pegarCupomPorId($idcupom);
     exibir("cupom/visualizarcupom", $dados);
 }
-function deletar($id) {
-    $msg = deletarCupom($id);
+function deletar($idcupom) {
+    $msg = deletarCupom($idcupom);
     redirecionar("cupom/listarcupom");
 }   
     
-function editar($idFormaP){
+function editar($idcupom){
     if (ehPost()){
 
         $nomecupom = strip_tags ($_POST["nomecupom"]);
@@ -40,11 +40,11 @@ function editar($idFormaP){
         echo $descricao;
         
         
-        editarCupom($id, $nomecupom, $desconto);
+        editarCupom($idcupom, $nomecupom, $desconto);
         redirecionar("cupom/listarcupom");
     }else{
         
-        $dados["cupom"] = pegarCupomPorId($id);
+        $dados["cupons"] = pegarCupomPorId($idcupom);
         exibir("cupom/adicionarcupom", $dados);
     }
 }
