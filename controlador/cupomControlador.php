@@ -1,53 +1,39 @@
 <?php
-
 require_once "modelo/cupomModelo.php";
-
-function adicionar() {
-    $dados = array();
-    if (ehPost()) {
-        $nomecupom = $_POST["nomecupom"];
-        $desconto = $_POST["desconto"];
+function adicionar(){
+    if (ehPost()){
+        $nomecupom=$_POST['nomecupom'];
+        $desconto=$_POST['desconto'];
+       $msg =  adicionarcupom($nomecupom, $desconto);
+       redirecionar("cupom/listarcupom");
         
-      $msg = adicionarCupom($nomecupom, $desconto);
-      redirecionar("cupom/listarcupom");
-        
-    } else {
-    }
+    }else{
         exibir("cupom/adicionarcupom");
-    
+    }
 }
-
-function listarCupom() {
-    $dados = array();
-    $dados["cupons"] = pegarTodosCupons();
+function listarcupom(){
+    $dados= array();
+    $dados["cupons"]= pegarTodosCupons();
     exibir("cupom/listarcupom", $dados);
 }
-function ver($idcupom) {
-    $dados["cupons"] = pegarCupomPorId($idcupom);
+function ver($id){
+    $dados= array();
+    $dados["cupom"]= pegarCupomId($id);
     exibir("cupom/visualizarcupom", $dados);
 }
-function deletar($idcupom) {
-    $msg = deletarCupom($idcupom);
+function deletar($id){
+    $msg= deletarCupom($id);
     redirecionar("cupom/listarcupom");
-}   
-    
-function editar($idcupom){
+}
+function editar($id){
     if (ehPost()){
-
-        $nomecupom = strip_tags ($_POST["nomecupom"]);
-        $desconto = strip_tags ($_POST["desconto"]);
-        
-        echo $descricao;
-        
-        
-        editarCupom($idcupom, $nomecupom, $desconto);
+        $nomecupom=$_POST['nomecupom'];
+        $desconto=$_POST['desconto'];
+        $msg =  editarcupom($id, $nomecupom, $desconto);
         redirecionar("cupom/listarcupom");
-    }else{
         
-        $dados["cupons"] = pegarCupomPorId($idcupom);
-        exibir("cupom/adicionarcupom", $dados);
+    }else{
+        $dados["cupom"]= pegarCupomId($id);
+        exibir("cupom/adicionarcupom",  $dados);
     }
 }
-
-?>
-
