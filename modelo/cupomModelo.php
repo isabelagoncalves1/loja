@@ -18,22 +18,22 @@ function pegarTodosCupons() {
     }
     return $cupons;
 }
-function pegarCupomPorId($id) {
-    $sql = "SELECT * FROM cupom WHERE idcupom = $id";
+function pegarCupomPorId($idcupom) {
+    $sql = "SELECT * FROM cupom WHERE idcupom = $idcupom";
     $resultado = mysqli_query(conn(), $sql);
     $cupom = mysqli_fetch_assoc($resultado);
     return $cupom;
 }
-function deletarCupom($id) {
-    $sql = "DELETE FROM cupom WHERE idcupom = $id";
+function deletarCupom($idcupom) {
+    $sql = "DELETE FROM cupom WHERE idcupom = $idcupom";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) {
         die('Erro ao deletar cupom' . mysqli_error($cnx));
     }
     return 'Cupom deletado com sucesso!';
 }
-function editarCupom($id, $nomecupom, $desconto) {
-    $sql = "UPDATE cupom SET nomecupom = '$nomecupom', desconto = '$desconto' WHERE idcupom = $id";
+function editarCupom($idcupom, $nomecupom, $desconto) {
+    $sql = "UPDATE cupom SET nomecupom = '$nomecupom', desconto = '$desconto' WHERE idcupom = $idcupom";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) {
         die('Erro ao alterar cupom' . mysqli_error($cnx));
