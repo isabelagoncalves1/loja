@@ -22,7 +22,7 @@ CREATE DATABASE webgbd;
 USE webgbd;
 
 CREATE TABLE usuario(
-    idusuario int(11) not null auto_increment,
+   idusuario int(11) not null auto_increment,
     nomeusuario varchar(60) not null,
     email varchar(60) not null,
     senha varchar(60) not null,
@@ -58,6 +58,12 @@ categoria varchar(60),
 estoque_minimo int(11) not null,
 estoque_maximo int(11) not null,
 primary key(idproduto)
+);
+
+CREATE TABLE categoria(
+    idcategoria int not null auto_increment,
+    descricao varchar(50) not null,
+    primary key(idcategoria)
 );
 
 
@@ -102,4 +108,5 @@ idpedido int(11) not null,
 primary key (idproduto, idpedido), 
 foreign key (idproduto) references produtos (idproduto) on delete cascade on update cascade,
 foreign key (idpedido) references pedido (idpedido) on delete cascade on update cascade
-);
+); 
+
