@@ -110,3 +110,10 @@ foreign key (idproduto) references produtos (idproduto) on delete cascade on upd
 foreign key (idpedido) references pedido (idpedido) on delete cascade on update cascade
 ); 
 
+CREATE TABLE formapagamento(
+    idFormaPagamento int not null auto_increment,
+    descricao varchar(45) not null,
+    primary key(idFormaPagamento)
+);
+
+
