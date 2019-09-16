@@ -46,18 +46,19 @@ primary key(idendereco),
 foreign key(idusuario) references usuario (idusuario) on delete cascade on update cascade
 );
 
-CREATE TABLE produtos(
-idproduto int(11) not null auto_increment,
-preco double not null,
-nomeproduto varchar(30) not null,
-descricao varchar(60) not null,
-tamanho varchar(60) not null,
-imagem varchar(60)not null,
-sexo varchar(60) not null,
-categoria varchar(60),
-estoque_minimo int(11) not null,
-estoque_maximo int(11) not null,
-primary key(idproduto)
+CREATE TABLE produto(
+    idproduto integer not null auto_increment,
+    idcategoria int not null,
+    preco double not null,
+    nome varchar(30) not null,
+    descricao varchar(60) not null,
+    imagem varchar(60) not null,
+    estoque_minimo int(11) not null,
+    estoque_maximo int(11) not null,
+    quant_estoque integer not null,
+    
+    foreign key (idcategoria) references categoria (idcategoria) on delete cascade on update cascade,
+    primary key(idProduto)
 );
 
 CREATE TABLE categoria(
