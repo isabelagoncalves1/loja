@@ -1,6 +1,4 @@
-
 <div id="titulo">
-
     <h1>Seu carrinho</h1>
 </div>
 <div id="blocao">
@@ -12,10 +10,12 @@
                 <h6 id="pe3">Valor total</h6>
             </div>
         </div>
-        <?php foreach ($produto as $produtos): ?>
+        <?php 
+        echo "<pre>"; print_r($produtos);echo "</pre>";
+        foreach ($produtos as $produto): ?>
             <div id="foto">
-                <img src="<?= $produtos['imagem'] ?>" alt="Produto 1">
-                <p id="desc"><?= $produtos['nome'] ?></p><br></p>
+                <img src="<?=$produto['imagem']?>" id="img2">
+                <p id="desc"><?= $produto['nome'] ?></p><br>
 
                 <div id="qnt">
                     <td class="cart__update-wrapper cart-flex-item text-right">
@@ -27,12 +27,12 @@
                 </div>
 
 
-                <p id="tx1"><?= $produtos['preco'] ?></p>
+                <p id="tx1"><?= $produto['preco'] ?></p>
 
             </div>
         <?php endforeach; ?>
-       
-        
+
+
         <div id="pai2">
             <div id="desconto">
                 <h6>CUPOM DE DESCONTO</h6>
@@ -50,7 +50,7 @@
                         <button class="botao01">OK</button>
 
                     </form>
-                   
+
                 </div>
             </div>
             <div class="contentt">
