@@ -11,11 +11,11 @@
             </div>
         </div>
         <?php 
-        echo "<pre>"; print_r($produtos);echo "</pre>";
-        foreach ($produtos as $produto): ?>
+       
+        foreach ($produto as $produtos): ?>
             <div id="foto">
-                <img src="<?=$produto['imagem']?>" id="img2">
-                <p id="desc"><?= $produto['nome'] ?></p><br>
+                <img src="<?=$produtos['imagem']?>" id="img2">
+                <p id="desc"><?= $produtos['nome'] ?></p><br>
 
                 <div id="qnt">
                     <td class="cart__update-wrapper cart-flex-item text-right">
@@ -27,7 +27,7 @@
                 </div>
 
 
-                <p id="tx1"><?= $produto['preco'] ?></p>
+                <p id="tx1"><?= $produtos['preco'] ?></p>
 
             </div>
         <?php endforeach; ?>
