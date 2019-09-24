@@ -2,7 +2,7 @@
 
 require_once "modelo/enderecoModelo.php";
 require_once "modelo/clienteModelo.php";
-
+/** anon */
 function cadastrar($idCliente) {
     $dados = array();
     if (ehPost()) {
@@ -22,23 +22,23 @@ function cadastrar($idCliente) {
         exibir("paginas/adicionarendereco", $dados);
     }
 }
-
+/** anon */
 function listarE() {
     $dados = array();
     $dados["enderecos"] = listarEndereco();
     exibir("paginas/listarenderecos", $dados);
 }
-
+/** anon */
 function ver($idendereco) {
     $dados["enderecos"] = pegarenderecoPorId($idendereco);
     exibir("paginas/visualizarEndereco", $dados);
 }
-
+/** anon */
 function deletar($idendereco, $idCliente) {
     $msg = deletarEndereco($idendereco);
     redirecionar("cliente/ver/$idCliente");
 }
-
+/** anon */
 function editar($idCliente, $idendereco) {
 
 

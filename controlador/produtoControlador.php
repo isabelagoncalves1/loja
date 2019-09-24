@@ -3,7 +3,7 @@
 require_once "modelo/produtoModelo.php";
 require_once "modelo/categoriaModelo.php";
 require_once "servico/uploadServico.php";
-
+/** admin */
 function adicionar() {
     $dados = array();
     if (ehPost()) {
@@ -27,7 +27,7 @@ function adicionar() {
         exibir("paginas/adicionarproduto", $dados);
     }
 }
-
+/** anon */
 function buscar() {
     if (ehPost()) {
         $nome_da_busca = $_POST['busca'];
@@ -37,23 +37,23 @@ function buscar() {
         exibir("paginas/adm", $dados);
     }
 }
-
+/** anon */
 function listarprodutos() {
     $dados = array();
     $dados["produtos"] = listarp();
     exibir("paginas/adm", $dados);
 }
-
+/** anon */
 function ver($id) {
     $dados["produtos"] = pegarProdutoId($id);
     exibir("paginas/visualizarProduto", $dados);
 }
-
+/** admin */
 function deletar($idProduto) {
     $msg = deletarProduto($idProduto);
     redirecionar("produto/listarprodutos");
 }
-
+/** admin */
 function editar($idProduto) {
 
 

@@ -2,7 +2,7 @@
 
 require_once "modelo/clienteModelo.php";
 require_once "modelo/enderecoModelo.php";
-
+/** anon */ 
 function cadastrar() {
     $dados = array(); 
     $dados["erroEmail"] = "";
@@ -42,26 +42,26 @@ function cadastrar() {
     
     exibir("paginas/formulariocadastro", $dados);
 }
-
+/** anon */ 
 function listarClientes() {
     $dados = array();
     $dados["clientes"] = pegarTodosClientes();
     exibir("paginas/listar", $dados);
 }
-
+/** anon */ 
 function ver($idCliente){
     $dados["enderecos"] = pegarenderecoPorIdCliente($idCliente);
     $dados["cliente"] = pegarClientePorId($idCliente);
     exibir("paginas/visualizarcliente", $dados);
 }
 
-
+/** anon */ 
 function deletar($idCliente){
     $msg = deletarCliente($idCliente);    
     redirecionar("cliente/listarClientes");
 }
 
-
+/** anon */ 
 function editar($idCliente){
     
     $dados = array(); 
