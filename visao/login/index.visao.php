@@ -1,14 +1,15 @@
 <h2>Acesse o sistema</h2>
 
 <form method="POST" action="">
+    <div id="formaoA">
+        <div id="cliente">
+            <p>Email:</p> 
+            <input id="login" class="form-control" type="text" name="email">
 
+            <p>Senha:</p> 
+            <input id="passwd" class="form-control" type="password" name="senha">
 
-    <label for="login">email:</label>
-    <input id="login" class="form-control" type="text" name="email">
-
-    <label for="passwd">senha:</label>
-    <input id="passwd" class="form-control" type="password" name="senha">
-
-    <button type="submit" class="btn btn-primary">vai login</button>
-
+            <br><br><button type="submit" class="botao02">vai login</button>
+        </div>
+    </div>
 </form>

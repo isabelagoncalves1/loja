@@ -42,7 +42,7 @@ function cadastrar() {
     
     exibir("paginas/formulariocadastro", $dados);
 }
-/** anon */ 
+/** admin */ 
 function listarClientes() {
     $dados = array();
     $dados["clientes"] = pegarTodosClientes();

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>template MVC</title>
+        <title>90s</title>
         <base href="<?= URL_BASE ?>"><!--Esta instrução é super importante e não deve ser mudada!-->
 
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Antic" rel="stylesheet">

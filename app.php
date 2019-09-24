@@ -1,4 +1,5 @@
 <?php
+
 require_once "biblioteca/acesso.php";
 require_once "biblioteca/alert.php";
 

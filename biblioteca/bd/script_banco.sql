@@ -86,3 +86,5 @@ CREATE TABLE IF NOT EXISTS cupom(
     PRIMARY KEY(idcupom)
 );
 
+INSERT INTO cadastrocliente (email, senha, senha_confirma, nome, tipousuario, cpf, sexo, datan) 
+    VALUES ('admin@admin.com', '123', '123', 'admin', 'admin', '12345678910', 'f', '10101989');

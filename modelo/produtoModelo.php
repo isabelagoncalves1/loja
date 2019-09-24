@@ -17,9 +17,8 @@ function adicionarProduto($idcategoria, $preco, $nome, $descricao, $imagem, $est
     return 'Produto cadastrado com sucesso!';
 }
 
-function pegarprodutoPorId($idProduto){
+function pegarprodutoId($idProduto){
     $sql = "SELECT * FROM addproduto WHERE idProduto= $idProduto";
-    
     $resultado = mysqli_query(conn(), $sql);
     $produto = mysqli_fetch_assoc($resultado);
     return $produto;
@@ -46,10 +45,8 @@ function deletarProduto($idProduto) {
 
 
 function editarProduto($idProduto, $idcategoria, $preco, $nome, $descricao, $imagem, $estoque_minimo, $estoque_maximo, $quant_estoque){
-    $sql = "UPDATE addproduto SET idcategoria = '$idcategoria', preco = '$preco', nome = '$nome', descricao = '$descricao', imagem = '$imagem', estoque_minimo = '$estoque_minimo', estoque_maximo = '$estoque_maximo', quant_estoque = '$quant_estoque' WHERE idProduto = $idProduto";
-    
+    $sql = "UPDATE addproduto SET idcategoria = '$idcategoria', preco = '$preco', nome = '$nome', descricao = '$descricao', imagem = '$imagem', estoque_minimo = '$estoque_minimo', estoque_maximo = '$estoque_maximo', quant_estoque = '$quant_estoque' WHERE idProduto = $idProduto";  
     echo $sql;
-    
     $resultado = mysqli_query($cnx = conn(), $sql);
     if(!$resultado){die('Erro ao alterar produto' . mysqli_error($cnx));}
     return 'Produto alterado com sucesso!';

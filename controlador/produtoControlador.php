@@ -3,6 +3,7 @@
 require_once "modelo/produtoModelo.php";
 require_once "modelo/categoriaModelo.php";
 require_once "servico/uploadServico.php";
+
 /** admin */
 function adicionar() {
     $dados = array();
