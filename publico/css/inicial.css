@@ -1559,3 +1559,13 @@ h1#h1f{
 #cssdalista{
     margin-bottom: 5%;
 }
+
+
+#cliente {
+    width: 400px;
+    margin-left: 37%;
+}
+#cliente h2{
+    text-align: center;
+}
+

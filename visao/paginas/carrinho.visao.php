@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="contentt">
-                <a href="index.html" class="botao02">FINALIZAR PEDIDO</a>
+                <a href="pedido/finalizarPedido" class="botao02">FINALIZAR PEDIDO</a>
                 <a href="./carrinho/deletar" class="botao02">APAGAR CARRINHO</a>
 
             </div>
