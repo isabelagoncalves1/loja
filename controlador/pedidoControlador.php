@@ -2,16 +2,25 @@
 
 //require_once "";
 require_once "modelo/FormaPagamentoModelo.php";
+require_once "modelo/enderecoModelo.php";
+require_once "modelo/cupomModelo.php";
 
-function finalizarPedido() {
+function salvarpedido() {
     if (acessoUsuarioEstaLogado()) {
-        exibir("pedido/finalizarpedido");
+
+        $dados["formas"] = listarFormaPagamento();
+        $dados["enderecos"] = listarEndereco();
+        $dados["cupons"] = pegarTodosCupons();
+        
+    
+
+        exibir("pedido/finalizarpedido", $dados);
     } else {
         redirecionar(login / index);
     }
 }
 
-function listarfinalização() {
+/*function listarfinalização() {
     $idFormaP = strip_tags($_POST["idFormaP"]);
     $cpf = strip_tags($_POST["cpf"]);
     $datacompra = strip_tags($_POST["datacompra"]);
@@ -19,3 +28,4 @@ function listarfinalização() {
     $msg = finalização($idFormaP, $cpf, $datacompra);
     $dados["formas"] = listarForma();
 }
+ */

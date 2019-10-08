@@ -19,7 +19,6 @@ function pegarTodosClientes(){
 
 function pegarClientePorId($idCliente){
     $sql = "SELECT * FROM cadastrocliente WHERE idCliente= $idCliente";
-    
     $resultado = mysqli_query(conn(), $sql);
     $cliente = mysqli_fetch_assoc($resultado);
     return $cliente;

@@ -1322,6 +1322,13 @@ img {vertical-align: middle;}
 
 }
 
+#formm{
+    
+    width: 525px;
+    margin-left: 35%;
+    margin-bottom: 40px;
+
+}
 
 .errop{
     color: #60a8a9;
@@ -1380,6 +1387,17 @@ h1#h1f{
     font-family: 'Antic', sans-serif;
 }
 
+#formm input{
+    border-radius: 4px;
+    border-color: #c3e2de;
+    height: 25px;
+    width: 190px;
+}
+#formm p{
+
+    font-family: 'Antic', sans-serif;
+}
+
 
 #p5{
     margin-left: 10%;
@@ -1397,6 +1415,13 @@ h1#h1f{
 }
 
 #form select{
+    border-color: #c3e2de;
+    border-radius: 4px;
+    width: 90px;
+    height: 25px;
+}
+
+#formm select{
     border-color: #c3e2de;
     border-radius: 4px;
     width: 90px;

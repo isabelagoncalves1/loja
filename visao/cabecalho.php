@@ -14,14 +14,14 @@
             </div>
 
             <div id="logo">
-                <a href="./index/listarproduto"><img id="logao" src="./publico/FOTOS/90s.png" alt="Logão"></a>
+                <a href="paginas"><img id="logao" src="./publico/FOTOS/90s.png" alt="Logão"></a>
             </div>
             <a class="tt" href="./cliente/cadastrar/" class="">
 
             <div id="icones">
                 <section class="container flex-end">
                     <div class="item">
-                        <a href="./acesso/loginCliente"><img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone1"></a>
+                        <a href="cliente/ver/"><?=acessoPegarUsuarioLogado();?><img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone1"></a>
 
                     </div>
                     <div class="item">
