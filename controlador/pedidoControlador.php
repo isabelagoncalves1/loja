@@ -31,18 +31,17 @@ function salvarpedido() {
 
         if (ehPost()) {
             $nomecupom = $_POST['nomecupom'];
-            $desconto = $_POST['desconto'];
             
-            $totalcupom = 0;
-            for ($i = 0; $nomecupom <=$i++){
-                $totalcupom = $
-            }
+            //buscar no banco
             
+            //pegar o desconto!
+            
+  
         }
 
             exibir("pedido/finalizarpedido", $dados);
         } else {
-            redirecionar(login / paginas);
+//            redirecionar(login / paginas);
         }
 
         function teste() {

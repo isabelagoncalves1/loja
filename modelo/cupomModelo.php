@@ -44,3 +44,11 @@ function editarcupom($id, $nomecupom, $desconto){
     }
     return "Dados atualizados com sucesso!";
 }
+
+function pegarCupomNome($nomecupom){
+    $comando="select * from cupom where nomecupom= $nomecupom;";
+    $cnx= conn();
+    $resul= mysqli_query($cnx, $comando);
+    $cupom= mysqli_fetch_assoc($resul);
+    return $cupom;
+}
