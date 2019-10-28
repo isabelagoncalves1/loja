@@ -23,7 +23,8 @@
 </form>
 
         <p>Cupons</p>
-        
+        <p>Preço depois do desconto </p>
+        <p class="errop">R$<?php echo $cupon; ?></p>
         <form method="POST" action="">
             <input type="text" name="nomecupom" value="">
             <button type="submit" class="botao05" >Aplicar desconto</button>    

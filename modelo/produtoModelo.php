@@ -52,3 +52,4 @@ function editarProduto($idProduto, $idcategoria, $preco, $nome, $descricao, $ima
     return 'Produto alterado com sucesso!';
 }
 
+

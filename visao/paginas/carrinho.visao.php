@@ -28,7 +28,9 @@
 
 
                 <p id="tx1"><?= $produtos['preco'] ?></p>
-
+                <div class="contentt">
+                    <a href="./carrinho/removerProduto/<?= $produtos['idProduto']?>" class="botao02">Apagar produto</a>
+                </div>
             </div>
         <?php endforeach; ?>
 

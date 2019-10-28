@@ -21,7 +21,15 @@
                 <div id="icones">
                     <section class="container flex-end">
                         <div class="item">
-
+                           <?php if (acessoUsuarioEstaLogado()): ?>
+                            <a href="cliente/ver/<?= acessoPegarUsuarioLogado(); ?>"></a>
+                                    
+                                <a href="./login/logout"><img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone1"></a>
+                            <?php else: ?>   
+                                <a href="./login"> <img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone1"></a>
+                               
+                            <?php endif; ?>
+ 
 
 
                         </div>
@@ -31,15 +39,10 @@
                         </div>
                     </section>
                 </div>
+
         </div>
     </div>
 </nav>
 
 
 
-<?php if (acessoUsuarioEstaLogado()): ?>
-    <a href="cliente/ver/<?= acessoPegarUsuarioLogado(); ?>"><img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone1"></a>
-    <a href="./login/logout">Sair</a>
-<?php else: ?>   
-    <a href="./login">Entrar</a>
-<?php endif; ?>

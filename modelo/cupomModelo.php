@@ -46,7 +46,7 @@ function editarcupom($id, $nomecupom, $desconto){
 }
 
 function pegarCupomNome($nomecupom){
-    $comando="select * from cupom where nomecupom= $nomecupom;";
+    $comando="select * from cupom where nomecupom= '$nomecupom'";
     $cnx= conn();
     $resul= mysqli_query($cnx, $comando);
     $cupom= mysqli_fetch_assoc($resul);

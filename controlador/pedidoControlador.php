@@ -31,32 +31,19 @@ function salvarpedido() {
 
         if (ehPost()) {
             $nomecupom = $_POST['nomecupom'];
-            
+            $dpsdesconto = 0;
             //buscar no banco
-            
-            //pegar o desconto!
-            
-  
-        }
-
-            exibir("pedido/finalizarpedido", $dados);
-        } else {
-//            redirecionar(login / paginas);
-        }
-
-        function teste() {
-
-            $notas = array();
-            $notas[0] = 2;
-            $notas[1] = 3;
-            $notas[2] = 9;
-            $notas[3] = 5;
-
-            $notasgeral = 0;
-            for ($i = 0; $i <= 4; $i++) {
-                $notasgeral = $notas[$i] + $notasgeral;
+            $cupom = pegarCupomNome($nomecupom);
+                $precototal = $produto['preco'];
+                $descontoproduto = $cupom['desconto'];
+                $dpsdesconto = $precototal - $descontoproduto;
+                print_r($dpsdesconto);
+                print_r($cupom);
             }
-        }
-
+            $dados["cupon"] = $dpsdesconto;
+        exibir("pedido/finalizarpedido", $dados);
+    } else {
+//            redirecionar(login / paginas);
     }
-    
+}
+//preciso arrumar o desconto, pq ele ta calculando errado
