@@ -115,12 +115,21 @@ html,body{font-family:'Antic',sans-serif;font-size:15px;line-height:1.5}html{ove
 }
 
 
+#filho{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
 #logao{
     width: 158px;
     height: 152px;
     margin-top: 15px;
     margin-left: 60px;
 
+}
+
+#paicarac{
+    display: flex;
 }
 
 
@@ -771,8 +780,10 @@ a {
     margin-top: 10px;
 }
 .qntd{
-    width: 50px;
+    width: 60px;
     height: 43px;
+    box-shadow: 1px 2px #c2e3de;
+    border: 2px solid #c2e3de;
 }
 
 #tx{
@@ -822,8 +833,9 @@ a {
 
 #desconto input{
     border-radius: 3px;
-
-    border-color: #c3bdbd;
+    box-shadow: 1px 2px #c2e3de;
+    border: 2px solid #c2e3de;
+    
     width: 178px;
     height: 22px;
     margin-top: 15px;
@@ -860,7 +872,8 @@ a {
 #cep input{
     border-radius: 4px;
     margin-left: 8%;
-    border-color: #c3bdbd;
+    box-shadow: 1px 2px #c2e3de;
+    border: 2px solid #c2e3de;
     width: 170px;
     height: 22px;
     margin-top: 28px;
@@ -868,7 +881,8 @@ a {
 .botao02{
     background-color: #e6e6e6;
     border-radius: 4px;
-    box-shadow: 0 3px 0 #8a8585, 0 2px 7px #000000;
+    border: 2px solid #c2e3de;
+    box-shadow: 1px 2px #c2e3de;
     color: #636060;
     display: block;
     font-family: 'Antic', sans-serif;
@@ -903,7 +917,8 @@ a {
 .botao05{
     background-color: #e6e6e6;
     border-radius: 4px;
-    box-shadow: 0 3px 0 #8a8585, 0 2px 7px #000000;
+    box-shadow: 1px 2px #c2e3de;
+    border: 2px solid #c2e3de;
     color: #636060;
     display: block;
     font-family: 'Antic', sans-serif;
@@ -992,8 +1007,8 @@ a {
 .botao01{
 
     border-radius: 6px;
-    box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
-        0 2px 7px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px #c2e3de;
+    border: 2px solid #c2e3de;
     display: block;
     font-family: 'Antic', sans-serif;
 
@@ -1377,8 +1392,8 @@ h1#h1f{
 #paip3{display: flex; margin-top: 20px;}
 
 #form input{
-    border-radius: 4px;
-    border-color: #c3e2de;
+    box-shadow: 1px 2px #c2e3de;
+    border: 2px solid #c2e3de;
     height: 25px;
     width: 190px;
 }
@@ -1388,8 +1403,8 @@ h1#h1f{
 }
 
 #formm input{
-    border-radius: 4px;
-    border-color: #c3e2de;
+    box-shadow: 1px 2px #c2e3de;
+    border: 2px solid #c2e3de;
     height: 25px;
     width: 190px;
 }
@@ -1415,8 +1430,8 @@ h1#h1f{
 }
 
 #form select{
-    border-color: #c3e2de;
-    border-radius: 4px;
+    box-shadow: 1px 2px #c2e3de;
+    border: 2px solid #c2e3de;
     width: 90px;
     height: 25px;
 }

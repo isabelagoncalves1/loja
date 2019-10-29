@@ -7,6 +7,7 @@ require_once "modelo/cupomModelo.php";
 require_once "modelo/produtoModelo.php";
 
 function salvarpedido() {
+    
     if (acessoUsuarioEstaLogado()) {
 
         $dados["formas"] = listarFormaPagamento();
@@ -29,21 +30,20 @@ function salvarpedido() {
         }
         $dados["produtos"] = $precototal;
 
+        $dados["total"] = 0;
         if (ehPost()) {
-            $nomecupom = $_POST['nomecupom'];
-            $dpsdesconto = 0;
-            //buscar no banco
-            $cupom = pegarCupomNome($nomecupom);
-                $precototal = $produto['preco'];
-                $descontoproduto = $cupom['desconto'];
-                $dpsdesconto = $precototal - $descontoproduto;
-                print_r($dpsdesconto);
-                print_r($cupom);
-            }
-            $dados["cupon"] = $dpsdesconto;
+            $cupom = pegarCupomNome($_POST["desconto"]);
+            print_r($cupom);
+            $total = $precototal - $cupom;
+            $dados["produto"] = $_SESSION["carrinho"];
+            $dados["total"] = $total;
+
+            // $dados["cupon"] = $dpsdesconto;
+            
+        } else {          
+           //redirecionar("login/paginas");
+        }
         exibir("pedido/finalizarpedido", $dados);
-    } else {
-//            redirecionar(login / paginas);
     }
 }
-//preciso arrumar o desconto, pq ele ta calculando errado
+

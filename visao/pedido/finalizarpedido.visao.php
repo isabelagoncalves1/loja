@@ -19,16 +19,17 @@
         </select>
         <p>Preço total</p>
         <p class="errop">R$<?php echo $produtos; ?></p>
-        <button type="submit" class="botao05" >Entrar</button>
+        
 </form>
 
         <p>Cupons</p>
         <p>Preço depois do desconto </p>
-        <p class="errop">R$<?php echo $cupon; ?></p>
+        <p class="errop">R$<?php echo $total; ?></p>
         <form method="POST" action="">
-            <input type="text" name="nomecupom" value="">
+            <input type="text" name="desconto" value="">
             <button type="submit" class="botao05" >Aplicar desconto</button>    
         </form>
+        <button type="submit" class="botao05" >Entrar</button>
     </div>
     
     
