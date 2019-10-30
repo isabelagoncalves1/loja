@@ -4,6 +4,7 @@
         <base href="<?= URL_BASE ?>"><!--Esta instrução é super importante e não deve ser mudada!-->
 
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Antic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
         <script src="publico/js/jquery-1.8.2.min.js" type="text/javascript" ></script>
         <link rel="stylesheet" href="./publico/css/inicial.css">
         <link rel="shortcut icon" href="./publico/FOTOS/90s.png">

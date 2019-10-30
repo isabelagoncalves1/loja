@@ -312,7 +312,7 @@ a {
     display: flex;
     margin-left: 550px;
     width: 720px;
-    
+
 }
 
 
@@ -339,15 +339,15 @@ a {
 
 .p1{
     font-family: 'Antic', sans-serif;
-    font-size: 17px;
-   
+    font-size: 1.5rem;
+
 
 }
 
 
 .p11{
     font-family: 'Antic', sans-serif;
-  
+
 
 }
 
@@ -698,7 +698,7 @@ a {
 
 }
 .contentt{
-    
+
     margin-left: 18px;
     margin-top: 27px;
     margin-bottom: 30px;
@@ -835,7 +835,7 @@ a {
     border-radius: 3px;
     box-shadow: 1px 2px #c2e3de;
     border: 2px solid #c2e3de;
-    
+
     width: 178px;
     height: 22px;
     margin-top: 15px;
@@ -853,7 +853,7 @@ a {
 }
 
 #caracte2{
-   
+
     margin-left: 120px;
 }
 #cep{
@@ -1050,7 +1050,7 @@ a {
 
 #formA2 {
 
-    
+
     border-left: 1px solid #c2e3de;
 }
 
@@ -1058,7 +1058,7 @@ a {
     font-family: 'Antic', sans-serif;
     margin-top: 50px;
     margin-bottom: 2%;
-    
+
 }
 
 
@@ -1338,7 +1338,7 @@ img {vertical-align: middle;}
 }
 
 #formm{
-    
+
     width: 525px;
     margin-left: 35%;
     margin-bottom: 40px;
@@ -1453,7 +1453,7 @@ h1#h1f{
 #h1inicial{
     font-size: 40px;
     text-align: center;
-  
+
 }
 
 
@@ -1544,7 +1544,7 @@ h1#h1f{
     margin-left: 40%;
 }
 .prod{
-    
+
     margin-top: 39px;
     width: 500px;
     font-size: 20px;
@@ -1609,3 +1609,36 @@ h1#h1f{
     text-align: center;
 }
 
+#paiinicial{
+    display: flex;
+}
+
+.imgini{
+    max-width: 100%;
+
+}
+
+.imgini2{
+    width: 100% !important;
+    height: 100%;
+}
+
+
+.quatro{
+    margin-top: -4px !important;
+    max-height: 25vw;
+    margin-bottom: -6px;
+    width: 25% !important;
+    float: left;
+    display: inline;
+}
+
+
+.imgm{
+    width: 100%;
+}
+
+#pai16{
+    display: flex;
+   
+}
