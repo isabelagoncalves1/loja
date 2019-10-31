@@ -44,6 +44,12 @@ function listarprodutos() {
     $dados["produtos"] = listarp();
     exibir("paginas/adm", $dados);
 }
+
+function listarprodutos2() {
+    $dados = array();
+    $dados["produtos"] = listarp();
+    exibir("paginas/index", $dados);
+}
 /** anon */
 function ver($id) {
     $dados["produtos"] = pegarProdutoId($id);

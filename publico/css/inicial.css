@@ -6,13 +6,13 @@ body{
     margin: auto;
 }
 h1,h2,h3,h4,h5,h6{
-    font-family:'Antic',sans-serif;
+    font-family: 'VT323', sans-serif;
     font-weight:400;margin:10px 0
 }
 .w3-wide{
     letter-spacing:4px
 }
-html,body{font-family:'Antic',sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+html,body{font-family: 'VT323', sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
 #menu {
     width: 1200px;
     margin: auto;
@@ -130,6 +130,7 @@ html,body{font-family:'Antic',sans-serif;font-size:15px;line-height:1.5}html{ove
 
 #paicarac{
     display: flex;
+    width: 100%;
 }
 
 
@@ -152,7 +153,7 @@ html,body{font-family:'Antic',sans-serif;font-size:15px;line-height:1.5}html{ove
 
 
 .txt{
-    font-family: 'Antic', sans-serif;
+
     color: #ebd067;
     font-size: 12px;
     margin-top: 10%;
@@ -178,7 +179,7 @@ html,body{font-family:'Antic',sans-serif;font-size:15px;line-height:1.5}html{ove
 
     text-align: center;
     font-size: 1px;
-    font-family: 'Antic', sans-serif;
+
 
 }
 
@@ -338,7 +339,7 @@ a {
 }
 
 .p1{
-    font-family: 'Antic', sans-serif;
+
     font-size: 1.5rem;
 
 
@@ -346,7 +347,7 @@ a {
 
 
 .p11{
-    font-family: 'Antic', sans-serif;
+
 
 
 }
@@ -366,6 +367,14 @@ a {
 .imgf2{
     width: 300px;
     height: 300px;
+    border-radius: 4px;
+    border: 4px solid #c2e3de;
+}
+
+.imgf3{
+    width: 300px;
+    height: 300px;
+
 }
 
 #paimapa{
@@ -373,7 +382,7 @@ a {
 }
 
 #paimapa h1{
-    font-family: 'Antic', sans-serif;
+
     text-align: center
 
 }
@@ -422,7 +431,7 @@ a {
     color: #60a8ad;
     text-align: center;
     font-size: 17px;
-    font-family: 'Antic', sans-serif;
+
     margin-right: 10px;
     font-weight: bold;
     margin-top: 20px;
@@ -787,7 +796,7 @@ a {
 }
 
 #tx{
-    font-family: 'Antic', sans-serif;
+
     color:  #ef94af; 
     font-size: 15px;
     margin-left: 65px;
@@ -795,14 +804,14 @@ a {
 }
 
 #tx1{
-    font-family: 'Antic', sans-serif;
+
     color:  #383838; 
     font-size: 18px;
     margin-left: 10%;
     margin-top: 45px;
 }
 #desc{
-    font-family: 'Antic', sans-serif;
+
     color:  #383838; 
     font-size: 15px;
     margin-left: 15px;
@@ -810,7 +819,7 @@ a {
     width: 115px;
 }
 #desconto{
-
+    font-family: 'Antic', sans-serif;
     width: 350px;
     height: 180px;
     margin-left: 15%;
@@ -825,7 +834,7 @@ a {
 }
 
 #desconto p{
-    font-family: 'Antic', sans-serif;
+font-family: 'Antic', sans-serif;
     font-size: 14px;
 
 
@@ -854,7 +863,7 @@ a {
 
 #caracte2{
 
-    margin-left: 120px;
+    margin-left: 30%;
 }
 #cep{
 
@@ -884,8 +893,9 @@ a {
     border: 2px solid #c2e3de;
     box-shadow: 1px 2px #c2e3de;
     color: #636060;
-    display: block;
     font-family: 'Antic', sans-serif;
+    display: block;
+
     font-size: 14px;
     font-weight: bold;
     line-height: 25px;
@@ -901,7 +911,7 @@ a {
     box-shadow: 0 3px 0 #8a8585, 0 2px 7px #000000;
     color: #636060;
     display: block;
-    font-family: 'Antic', sans-serif;
+
     font-size: 14px;
     font-weight: bold;
     line-height: 25px;
@@ -979,7 +989,9 @@ a {
 
 
 #formaoA input{
-    border-radius: 2px;
+    border-radius: 4px;
+    box-shadow: 1px 2px #c2e3de;
+    border: 2px solid #c2e3de;
     margin-left: 20%;
     border-color:  #c2e3de;
     width: 245px;
@@ -1640,5 +1652,74 @@ h1#h1f{
 
 #pai16{
     display: flex;
+
+}
+
+#pdodetalhes{
+    text-align: center;
+    font-family: 'VT323', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+
+
+select#detalheselect.botaodetalhes {
+    background: #ffffff url(//cdn.shopify.com/s/files/1/1152/2058/t/19/assets/thick-arrow-down.svg) no-repeat 96% 50%;
+    background-size: 15px;
+    color: black;
+    border-radius: 3px;
+    border: 2px solid #c2e3de;
+    cursor: pointer;
+    transition: 0.2s linear;
+    width: 100px;
+    height: 40px;
+}
+
+#ppdetalhes{
+    margin-right: 20px;
+    display: flex;
+    align-self: center;
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left; 
+    margin-bottom: 5px; 
+    text-transform: uppercase;
+}
+
+#paiprod3{
+    margin-top: 30px;
+    display: flex;
+}
+
+#irmaodetalhes{
+    margin-left: 45px;
+}
+
+#dad{
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: stretch;
+    height: 100%;
    
+}
+
+.botaoinicial{
+    background-image: linear-gradient(120deg, #ef94af 0%, #c2e3de 50%, #f2e0fe 50%, #47dee0 100%);
+    background-size: 240%;
+    padding: 20px 50px 19px;
+    
+    border: 2px solid black;
+    border-radius: 3px;
+    box-shadow: 1px 2px black;
+    margin-left: 15%;
+ 
+}
+
+
+#son{
+    padding: 30px;
 }

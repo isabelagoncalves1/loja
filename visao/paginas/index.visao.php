@@ -26,6 +26,23 @@
 
 </ul>
 
+<div id="dad">
+    <?php foreach ($produtos as $produto): ?>
+        <div id="dadd">
+            <div id="son">
+
+
+                <img class="imgf3" src="<?= $produto['imagem'] ?>">
+
+            </div>
+            <div id="sonn">
+                <td class="descr"><a href="./produto/ver/<?= $produto['idProduto'] ?>" class="botaoinicial"><?= $produto['nome'] ?></a></td>
+            </div>    
+        </div>
+
+    <?php endforeach; ?>
+</div>
+
 <div id="pai16">
     <div class="quatro">
         <img class="imgm" src="./publico/FOTOS/camisetarco.png" alt="Logão">
@@ -39,7 +56,7 @@
     <div class="quatro">
         <img class="imgm" src="./publico/FOTOS/moletomlua3.png" alt="Logão">
     </div>
-    
+
 </div>
 <div id="pai16">
     <div class="quatro">
@@ -54,6 +71,6 @@
     <div class="quatro">
         <img class="imgm" src="./publico/FOTOS/whereis3.jpg" alt="Logão">
     </div>
-    
+
 </div>
 
