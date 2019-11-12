@@ -1,3 +1,4 @@
+
 CREATE DATABASE webloja;
 
 USE webloja;

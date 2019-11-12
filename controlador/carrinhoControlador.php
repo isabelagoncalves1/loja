@@ -12,10 +12,10 @@ function comprar($idProduto) {
 /** anon */
 function exibirSession() { # listarCarrinho
     $lista = array();
-
+    print_r($_SESSION["carrinho"]);
     for ($i = 0; $i < count($_SESSION["carrinho"]); $i++) {
-        $id = $_SESSION["carrinho"][$i];
-        $produto = pegarProdutoId($id);
+        $idProduto = $_SESSION["carrinho"][$i];
+        $produto = pegarProdutoId($idProduto);
         $lista[] = $produto;
     }
     $dados["produto"] = $lista;
@@ -31,28 +31,26 @@ function deletar() {
 }
 
 /** anon */
-//*function removerItem() {
-//  $listaIds = $_SESSION["carrinho"];
-//for ($i = 0; $i < count($produtos); $i++) {
-//  if ($idElementoDeleta == $produtos[$i]) {
-//    echo "achei!";
-//  echo "O elemento a deletar é de indice $i";
-////deletar
-//unset($produtos[$i]);
-//}
-//}
-//}
-
-/** anon */
-function removerProduto($idProduto) {
+function removerProduto($id) {
     $listaIds = $_SESSION['carrinho'];
-    foreach ($listaIds as $key => $produto) {
-        if ($produto['idProduto'] == $idProduto) {
+    print_r($listaIds);
+    for ($i = 0; $i < count($_SESSION["carrinho"]); $i++) {
+        if ($idProduto = $_SESSION["carrinho"] == [$i]) {
             unset($listaIds[$key]);
         }
     }
+
     $_SESSION['carrinho'] = $listaIds;
     redirecionar("carrinho/exibirSession");
 }
+//function removerProduto($idProduto) {
+   # $listaIds = $_SESSION['carrinho'];
+   # foreach ($listaIds as $key => $produto) {
+      #  if ($produto['idProduto'] == $idProduto) {
+      #      unset($listaIds[$key]);
+       # }
+    ## $_SESSION['carrinho'] = $listaIds;
+   # redirecionar("carrinho/exibirSession");
 
 ?>
+

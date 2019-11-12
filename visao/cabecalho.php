@@ -21,25 +21,26 @@
                 <div id="icones">
                     <section class="container flex-end">
                         <div class="item">
-                           <?php if (acessoUsuarioEstaLogado()): ?>
-                            <a href="cliente/ver/<?= acessoPegarUsuarioLogado(); ?>"></a>
-                                    
-                                <a href="./login/logout"><img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone1"></a>
-                            <?php else: ?>   
-                                <a href="./login"> <img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone1"></a>
-                               
-                            <?php endif; ?>
- 
 
+                            <a href="./cliente/ver"><img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone2"></a>
 
                         </div>
                         <div class="item">
                             <a href="./carrinho/ExibirSession"><img class="i1" src="./publico/FOTOS/carrinho.png" alt="ícone2"></a>
 
                         </div>
+                        <div class="item">
+                            <?php if (acessoUsuarioEstaLogado()): ?>
+                                <a href="cliente/ver/<?= acessoPegarUsuarioLogado(); ?>"></a>
+
+                                <a href="./login/logout"><img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone1"></a>
+                            <?php else: ?>   
+                                <a href="./login"> <img class="i1" src="./publico/FOTOS/login.png" alt="ícone1"></a>
+
+                            <?php endif; ?>
+                        </div>
                     </section>
                 </div>
-
         </div>
     </div>
 </nav>

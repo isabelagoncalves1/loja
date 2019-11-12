@@ -21,6 +21,7 @@
                         <td class="descr"><?= $cliente['nome'] ?></td>
                         <td class="descr"><?= $cliente['email'] ?></td>
                         <td class="descr"><?= $cliente['cpf'] ?></td>
+                        <td class="descr"><?= $cliente['datan'] ?></td>
                     </tr>
                 </table>
 
