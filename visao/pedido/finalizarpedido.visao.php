@@ -23,10 +23,7 @@
         <div id="precototal">
             <p>Preço total</p>
             <p class="errop">R$<?php echo $produtos; ?></p>
-
-
         </div>
-
 
     </div>
     <div id="formfinalizar2">
@@ -48,7 +45,3 @@
             <button type="submit" class="botao5" >Finalizar</button>
         </div></div>
 </form>
-
-
-
-

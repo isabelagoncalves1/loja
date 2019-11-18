@@ -1,14 +1,11 @@
 <?php
-
 require_once "modelo/produtoModelo.php";
 require_once "servico/correiosServico.php";
-
 /** anon */
 function comprar($idProduto) {
     $_SESSION["carrinho"][] = $idProduto;
     redirecionar("./carrinho/exibirSession");
 }
-
 /** anon */
 function exibirSession() { # listarCarrinho
     $lista = array();
@@ -21,7 +18,6 @@ function exibirSession() { # listarCarrinho
     $dados["produto"] = $lista;
     exibir("paginas/carrinho", $dados);
 }
-
 /** anon */
 function deletar() {
     unset($_SESSION["carrinho"]);
@@ -29,7 +25,6 @@ function deletar() {
     unset($_SESSION['carrinho']);
     redirecionar("produto/listarprodutos");
 }
-
 /** anon */
 function removerProduto($id) {
     $listaIds = $_SESSION['carrinho'];
@@ -39,12 +34,9 @@ function removerProduto($id) {
             unset($listaIds[$i]);
         }
     }
-
     $_SESSION['carrinho'] = $listaIds;
     redirecionar("carrinho/exibirSession");
 }
-
-
 function ola() {
     
     
@@ -60,7 +52,6 @@ function ola() {
     
     
 }
-
 //function removerProduto($idProduto) {
    # $listaIds = $_SESSION['carrinho'];
    # foreach ($listaIds as $key => $produto) {
@@ -69,6 +60,4 @@ function ola() {
        # }
     ## $_SESSION['carrinho'] = $listaIds;
    # redirecionar("carrinho/exibirSession");
-
 ?>
-

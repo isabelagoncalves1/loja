@@ -1,4 +1,4 @@
-
+DROP DATABASE IF EXISTS webloja;
 CREATE DATABASE webloja;
 
 USE webloja;

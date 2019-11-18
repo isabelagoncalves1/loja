@@ -2,11 +2,13 @@
 
 require_once "modelo/usuarioModelo.php";
 
+/** admin */
 function index() {
     $dados["usuarios"] = pegarTodosUsuarios();
     exibir("usuario/listar", $dados);
 }
 
+/** anon */
 function adicionar() {
     if (ehPost()) {
         $nome = $_POST["usuario"];
@@ -19,11 +21,13 @@ function adicionar() {
     }
 }
 
+/** anon */
 function deletar($id) {
     alert(deletarUsuario($id));
     redirecionar("usuario/index");
 }
 
+/** anon */
 function editar($id) {
     if (ehPost()) {
         $nome = $_POST["nome"];
@@ -36,6 +40,7 @@ function editar($id) {
     }
 }
 
+/** anon */
 function visualizar($id) {
     $dados["usuario"] = pegarUsuarioPorId($id);
     exibir("usuario/visualizar", $dados);

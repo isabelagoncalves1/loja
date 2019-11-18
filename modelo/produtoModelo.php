@@ -43,7 +43,6 @@ function deletarProduto($idProduto) {
     return 'Produto deletado com sucesso!';
 }
 
-
 function editarProduto($idProduto, $idcategoria, $preco, $nome, $descricao, $imagem, $estoque_minimo, $estoque_maximo, $quant_estoque){
     $sql = "UPDATE addproduto SET idcategoria = '$idcategoria', preco = '$preco', nome = '$nome', descricao = '$descricao', imagem = '$imagem', estoque_minimo = '$estoque_minimo', estoque_maximo = '$estoque_maximo', quant_estoque = '$quant_estoque' WHERE idProduto = $idProduto";  
     echo $sql;
@@ -52,4 +51,12 @@ function editarProduto($idProduto, $idcategoria, $preco, $nome, $descricao, $ima
     return 'Produto alterado com sucesso!';
 }
 
-
+function BuscarProdutoPorCastegoria($idCategoria){
+    $sql = "SELECT * FROM addproduto WHERE idcategoria = '$idCategoria'";
+    $resultado = mysqli_query(conn(), $sql);
+    $produtos = array();
+    while ($linha = mysqli_fetch_assoc($resultado)) {
+        $produtos[] = $linha;
+    }
+    return $produtos;
+}

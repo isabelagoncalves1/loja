@@ -41,6 +41,7 @@ function buscar() {
 /** anon */
 function listarprodutos() {
     $dados = array();
+    $dados["categorias"] = listarc();
     $dados["produtos"] = listarp();
     exibir("paginas/adm", $dados);
 }
@@ -52,7 +53,7 @@ function listarprodutos2() {
 }
 /** anon */
 function ver($id) {
-    $dados["produtos"] = pegarProdutoId($id);
+    $dados["produtos"] = pegarprodutoId($id);
     exibir("paginas/visualizarProduto", $dados);
 }
 /** admin */
@@ -63,7 +64,6 @@ function deletar($idProduto) {
 /** admin */
 function editar($idProduto) {
 
-
     $ola = "mensagem";
 
     if (ehPost()) {
@@ -73,18 +73,27 @@ function editar($idProduto) {
         $descricao = strip_tags($_POST["descricao"]);
         $estoque_minimo = strip_tags($_POST["estoque_minimo"]);
         $estoque_maximo = strip_tags($_POST["estoque_maximo"]);
+        $quant_estoque = strip_tags($_POST["quant_estoque"]);
         
         $tmp_name_imagem = $_FILES["imagem"]["tmp_name"];
         $name_imagem = $_FILES["imagem"]["name"];
         $imagem = uploadImagem($tmp_name_imagem, $name_imagem);
 
-        editarProduto($idProduto, $idcategoria, $preco, $nome, $descricao, $imagem, $estoque_minimo, $estoque_maximo);
+        editarProduto($idProduto, $idcategoria, $preco, $nome, $descricao, $imagem, $estoque_minimo, $estoque_maximo, $quant_estoque);
         redirecionar("produto/listarprodutos");
     } else {
 
-        $dados["produtos"] = pegarprodutoPorId($idProduto);
+        $dados["produtos"] = pegarprodutoId($idProduto);
         $dados["categorias"] = listarc();
 
         exibir("paginas/adicionarproduto", $dados);
     }
+}
+
+/** anon */
+function BuscarPorCategoria ($id){
+    $dados = array();
+    $dados['produtos'] = BuscarProdutoPorCastegoria($id);
+    $dados['categorias'] = listarc();
+    exibir("paginas/adm", $dados);
 }

@@ -16,27 +16,18 @@
             <div id="logo">
                 <a href="paginas"><img id="logao" src="./publico/FOTOS/90s.png" alt="Logão"></a>
             </div>
-            <a class="tt" href="./cliente/cadastrar/" class="">
-
                 <div id="icones">
                     <section class="container flex-end">
                         <div class="item">
-
-                            <a href="./cliente/ver"><img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone2"></a>
-
-                        </div>
-                        <div class="item">
                             <a href="./carrinho/ExibirSession"><img class="i1" src="./publico/FOTOS/carrinho.png" alt="ícone2"></a>
-
                         </div>
                         <div class="item">
                             <?php if (acessoUsuarioEstaLogado()): ?>
-                                <a href="cliente/ver/<?= acessoPegarUsuarioLogado(); ?>"></a>
-
+                                <a href="cliente/ver/<?= acessoPegarUsuarioLogado(); ?>"><img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone1"></a>
                                 <a href="./login/logout"><img class="i1" src="./publico/FOTOS/login.png" alt="ícone1"></a>
                             <?php else: ?>   
                                 <a href="./login"> <img class="i1" src="./publico/FOTOS/login.png" alt="ícone1"></a>
-
+                                <a class="tt" href="./cliente/cadastrar/" class=""></a>
                             <?php endif; ?>
                         </div>
                     </section>
