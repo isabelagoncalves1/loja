@@ -33,7 +33,7 @@ function salvarpedido() {
         $dados["total"] = 0;
         if (ehPost()) {
             $cupom = pegarCupomNome($_POST["desconto"]);
-            print_r($cupom);
+           
             $total = $precototal - $cupom;
             $dados["produto"] = $_SESSION["carrinho"];
             $dados["total"] = $total;

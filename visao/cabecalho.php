@@ -33,7 +33,7 @@
                             <?php if (acessoUsuarioEstaLogado()): ?>
                                 <a href="cliente/ver/<?= acessoPegarUsuarioLogado(); ?>"></a>
 
-                                <a href="./login/logout"><img class="i1" src="./publico/FOTOS/usuario.png" alt="ícone1"></a>
+                                <a href="./login/logout"><img class="i1" src="./publico/FOTOS/login.png" alt="ícone1"></a>
                             <?php else: ?>   
                                 <a href="./login"> <img class="i1" src="./publico/FOTOS/login.png" alt="ícone1"></a>
 
