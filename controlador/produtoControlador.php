@@ -3,6 +3,7 @@
 require_once "modelo/produtoModelo.php";
 require_once "modelo/categoriaModelo.php";
 require_once "servico/uploadServico.php";
+require_once "modelo/pedidoModelo.php";
 
 /** admin */
 function adicionar() {
@@ -95,5 +96,13 @@ function BuscarPorCategoria ($id){
     $dados = array();
     $dados['produtos'] = BuscarProdutoPorCastegoria($id);
     $dados['categorias'] = listarc();
+    exibir("paginas/adm", $dados);
+}
+
+/** anon */
+function BuscarPorEndereco ($id){
+    $dados = array();
+    $dados[''] = listarPorMunicipio($idCliente, idendereco);
+    $dados['cliente'] = listarClientes();
     exibir("paginas/adm", $dados);
 }

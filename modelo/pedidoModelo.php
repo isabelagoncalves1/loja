@@ -5,17 +5,21 @@ function receberpedido($idCliente, $idendereco, $datacompra, $produtos){
     foreach ($idpedido as $idpedidos){
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
     $resultado = mysqli_query($cnx = conn(), $sql);   
     if(!$resultado){die('Erro' . mysqli_error($cnx));}
     return '**** cadastrado com sucesso!';
 }
+
+
+
+function listarPorMunicipio($idCliente, $idendereco){
+    $sql = "select cadastrocliente.nome, endereco.cidade from cadastrocliente inner join endereco on cadastrocliente.idCliente = endereco.idendereco";
+    $resultado = mysqli_query($cnx = conn(), $sql);
+    if(!$resultado) {
+        die('Erro ao listar municípios' . mysqli_error($cnx));
+    }
+    return 'Lista de municípios com sucesso!';
+}
+
 ?>

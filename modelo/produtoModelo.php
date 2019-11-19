@@ -60,3 +60,5 @@ function BuscarProdutoPorCastegoria($idCategoria){
     }
     return $produtos;
 }
+
+

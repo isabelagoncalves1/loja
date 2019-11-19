@@ -1143,12 +1143,6 @@ font-family: 'Antic', sans-serif;
     display: flex;
 }
 
-.botao03{
-    text-decoration: none;
-    background-color: #d6d6d6;
-}
-
-
 #dinheiro{
     font-size: 26px;
 }
@@ -1591,7 +1585,7 @@ h1#h1f{
 }
 
 #tudo2 h2{
-    margin-left: 450px;
+    text-align: center;
     font-size: 30px;
 }
 
@@ -1731,11 +1725,13 @@ select#detalheselect.botaodetalhes {
     background-size: 240%;
     padding: 20px 50px 19px;
     display: block;
-    border: 2px solid black;
+  
     border-radius: 3px;
-    box-shadow: 1px 2px black;
-    
+    box-shadow: 1px 2px #ea9eb5;
+    font-family: 'VT323', sans-serif;
     width: 200px;
+    text-align: center;
+    font-size: 20px;
 }
 
 
@@ -1792,4 +1788,27 @@ select#detalheselect.botaodetalhes {
     display: flex;
     justify-content: center;
     margin-top: 60px;
+}
+
+.table1{
+    width: 100%;
+    
+}
+
+#trcategoria{
+    display: flex;
+    justify-content: center;
+}
+
+.botao03{
+    background-image: linear-gradient(120deg, #ef94af 0%, #c2e3de 50%, #f2e0fe 50%, #47dee0 100%);
+    background-size: 240%;
+    display: block;
+  
+    border-radius: 3px;
+    box-shadow: 1px 2px #ea9eb5;
+    font-family: 'VT323', sans-serif;
+   
+    text-align: center;
+    
 }

@@ -2,6 +2,7 @@
 
 require_once "modelo/enderecoModelo.php";
 require_once "modelo/clienteModelo.php";
+require_once "modelo/pedidoModelo.php";
 /** anon */
 function cadastrar($idCliente) {
     $dados = array();
@@ -62,3 +63,5 @@ function editar($idCliente, $idendereco) {
         exibir("paginas/adicionarendereco", $dados);
     }
 }
+
+

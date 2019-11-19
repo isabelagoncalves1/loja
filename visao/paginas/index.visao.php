@@ -24,6 +24,8 @@
     <?php }?>
 </ul>
 
+<li> <a class="lista" href="./produto/listarprodutos2/"></a></li>
+
 <div id="dad">
     <?php foreach ($produtos as $produto): ?>
         <div id="dadd">
