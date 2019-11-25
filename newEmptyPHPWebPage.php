@@ -13,3 +13,14 @@
             $dados["cupon"] = $dpsdesconto;
         exibir("pedido/finalizarpedido", $dados);
     } else {
+    
+    
+    function listarPorMunicipio($idCliente){
+    $sql = "SELECT * FROM endereco WHERE idCliente = '$idCliente'";
+    $resultado = mysqli_query(conn(), $sql);
+    $produtoss = [];
+    while ($linha = mysqli_fetch_assoc($resultado)) {
+        $produtoss[] = $linha;
+    }
+    return $produtoss;
+}

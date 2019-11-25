@@ -4,6 +4,8 @@ require_once "modelo/produtoModelo.php";
 require_once "modelo/categoriaModelo.php";
 require_once "servico/uploadServico.php";
 require_once "modelo/pedidoModelo.php";
+require_once "modelo/enderecoModelo.php";
+require_once "modelo/clienteModelo.php";
 
 /** admin */
 function adicionar() {
@@ -99,10 +101,11 @@ function BuscarPorCategoria ($id){
     exibir("paginas/adm", $dados);
 }
 
-/** anon */
-function BuscarPorEndereco ($id){
+
+
+/** anon */ 
+function listarClientes() {
     $dados = array();
-    $dados[''] = listarPorMunicipio($idCliente, idendereco);
-    $dados['cliente'] = listarClientes();
-    exibir("paginas/adm", $dados);
+    $dados["clientes"] = pegarTodosClientes();
+    exibir("paginas/listar", $dados);
 }

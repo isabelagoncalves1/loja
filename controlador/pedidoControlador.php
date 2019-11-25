@@ -4,6 +4,8 @@ require_once "modelo/FormaPagamentoModelo.php";
 require_once "modelo/enderecoModelo.php";
 require_once "modelo/cupomModelo.php";
 require_once "modelo/produtoModelo.php";
+require_once "modelo/pedidoModelo.php";
+
 function salvarpedido() {
     
     if (acessoUsuarioEstaLogado()) {
@@ -37,4 +39,18 @@ function salvarpedido() {
         }
         exibir("pedido/finalizarpedido", $dados);
     }
+}
+
+/** admin */
+function index(){
+    $dados = array();
+    $dados["pedidos"] = listarPedidos();
+    exibir("pedido/pedidoEndereco", $dados);
+}
+
+/** anon */
+function BuscarPorEndereco($id){
+    $dados = array();
+    $dados['enderecos'] = listarPorMunicipio($id);
+    exibir("paginas/adm", $dados);
 }

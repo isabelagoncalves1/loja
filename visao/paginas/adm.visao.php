@@ -13,19 +13,7 @@
         <?php endforeach; ?>
                 </div>
     </table>
-    <table class="table1">
-        
-        <div id="trcategoria">
-        <?php foreach ($enderecos as $endereco): ?>
-        
-        
-                <p class="descr"><a href="./produto/BuscarPorEndereco/<?= $endereco['idendereco'] ?>" class="botao03"><?= $endereco['cidade'] ?></a>
-                </p>
-        
-        
-        <?php endforeach; ?>
-                </div>
-    </table>
+   
 
     <h2>Produtos</h2>
     <table class="table">
@@ -51,6 +39,20 @@
     </table>
     <a href="./produto/adicionar" class="botao05"> Novo produto</a>
     
+     <table class="table1">
+        
+        <div id="trcategoria">
+        <?php foreach ($enderecos as $endereco): ?>
+        
+        
+                <p class="descr"><a href="./produto/BuscarPorEndereco/<?= $endereco['cidade'] ?>" class="botao03"><?= $endereco['cidade'] ?></a>
+                </p>
+        
+        
+        <?php endforeach; ?>
+                </div>
+    </table>
+    
     <table class="table">
         <thead>
             <tr>
@@ -71,4 +73,7 @@
         </tr>
         <?php endforeach; ?>
 </table>
+    
+    
+    
 </div>
