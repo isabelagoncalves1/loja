@@ -5,19 +5,18 @@ function receberpedido($idCliente, $idendereco, $datacompra, $produtos){
     foreach ($idpedido as $idpedidos){
         
     }
-   
     $resultado = mysqli_query($cnx = conn(), $sql);   
     if(!$resultado){die('Erro' . mysqli_error($cnx));}
     return '**** cadastrado com sucesso!';
 }
 
 function listarPorMunicipio($cidade){
-    $sql = "SELECT p.* "
+    $sql = "SELECT p.idPedido, p.datacompra, u.nome AS 'usuario', e.cidade "
             . "FROM pedido p "
-            . "INNER JOIN cadastrocliente cc"
-            . "ON p.idCliente = cc.idCliente"
-            . "INNER JOIN endereco e"
-            . "ON cc.idCliente = e.idCliente"
+            . "INNER JOIN cadastrocliente u "
+            . "ON p.idCliente = u.idCliente "
+            . "INNER JOIN endereco e "
+            . "ON u.idCliente = e.idCliente "
             . "WHERE e.cidade = '$cidade'";
     $resultado = mysqli_query(conn(), $sql);
     $enderecos = array();
@@ -28,7 +27,12 @@ function listarPorMunicipio($cidade){
 }
 
 function listarPedidos(){
-    $sql = "SELECT COUNT(p.idpedido) AS quant, e.cidade FROM pedido p INNER JOIN cadastrocliente cc ON p.idCliente = cc.idCliente INNER JOIN endereco e ON cc.idCliente = e.idCliente GROUP BY e.cidade";
+    $sql = "SELECT p.idPedido, p.datacompra, u.nome AS 'usuario', e.* 
+            FROM pedido p
+            INNER JOIN cadastrocliente u
+            ON p.idCliente = u.idCliente
+            INNER JOIN endereco e
+            ON u.idCliente = e.idCliente";
     $resultado = mysqli_query(conn(), $sql);
     $enderecos = array();
     while ($linha = mysqli_fetch_assoc($resultado)) {
@@ -37,13 +41,16 @@ function listarPedidos(){
     return $enderecos;
 }
 
-
-# SUBSTITUIR VARIÁVEIS (TABELAS, COLUNAS
-# )
-$sql = "SELECT p.idpedido, p.datacompra, u.nome AS 'usuario', fp.nome AS 'pagamento'
-FROM pedido p
-INNER JOIN formapagamento fp
-ON p.idFormaPagamento = fp.idFormaPagamento
-INNER JOIN cadastrocliente u
-ON p.id = u.idCliente
-ORDER BY datacompra ASC";
+function pegarPedidoPorID($idPedido){
+    $sql = "SELECT p.idPedido, p.datacompra, u.nome AS 'usuario', e.* 
+            FROM pedido p
+            INNER JOIN cadastrocliente u
+            ON p.idCliente = u.idCliente
+            INNER JOIN endereco e
+            ON u.idCliente = e.idCliente
+            WHERE p.idPedido = '$idPedido'";
+    $resultado = mysqli_query(conn(), $sql);
+    $pedido = mysqli_fetch_assoc($resultado);
+    
+    return $pedido;
+}

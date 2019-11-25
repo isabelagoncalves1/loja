@@ -21,6 +21,7 @@
         <li> <a class="lista" href="./categoria/adicionar/">Cadastrar categoria</a></li>
         <li> <a class="lista" href="./produto/listarprodutos/">Listar produtos</a></li>
         <li><a class="lista" href="./cliente/listarClientes/">Listar clientes</a></li>
+        <li><a class="lista" href="./pedido/">Listar Pedidos</a></li>
     <?php }?>
 </ul>
 

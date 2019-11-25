@@ -421,9 +421,7 @@ a {
 
     width: 1030px;
     background-color: #fadf6f;
-    border-top-style: dotted;
-    border-bottom-style: dotted;
-    border-color: #60a8ad;
+    
 }
 
 
@@ -519,7 +517,13 @@ a {
     border-top: 1px solid #c3e2de;
     border-bottom: 1px solid #c3e2de;
 }
-
+.tablee{
+    text-align: center;
+    border-top: 1px solid #c3e2de;
+    border-bottom: 1px solid #c3e2de;
+    width: 1200px;
+    margin: auto;
+}
 .table2{
     width: 100%;
     margin-top: 30px;
@@ -905,6 +909,25 @@ font-family: 'Antic', sans-serif;
     margin-bottom: 30px;
 
 }
+
+.botao07{
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    border: 2px solid #c2e3de;
+    box-shadow: 1px 2px #c2e3de;
+    color: #636060;
+    font-family: 'Antic', sans-serif;
+    display: block;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+    margin-left: 34%;
+    width: 130px;
+    margin-bottom: 30px;
+
+}
 .botao06{
     background-color: #e6e6e6;
     border-radius: 4px;
@@ -960,6 +983,8 @@ font-family: 'Antic', sans-serif;
     height: 40px;
 
 }
+
+
 #pai2{
     display: flex;
     margin-top: 40px;
@@ -1811,4 +1836,20 @@ select#detalheselect.botaodetalhes {
    
     text-align: center;
     
+}
+
+
+label#plabel{
+      font-family: 'Antic', sans-serif;
+  font-size: 20px;
+    width: 160px;
+  
+}
+
+#form select{
+    border-color: #c3e2de;
+    border-radius: 4px;
+    width: 50%;
+    height: 25px;
+
 }

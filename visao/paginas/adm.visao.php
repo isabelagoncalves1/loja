@@ -39,40 +39,7 @@
     </table>
     <a href="./produto/adicionar" class="botao05"> Novo produto</a>
     
-     <table class="table1">
-        
-        <div id="trcategoria">
-        <?php foreach ($enderecos as $endereco): ?>
-        
-        
-                <p class="descr"><a href="./produto/BuscarPorEndereco/<?= $endereco['cidade'] ?>" class="botao03"><?= $endereco['cidade'] ?></a>
-                </p>
-        
-        
-        <?php endforeach; ?>
-                </div>
-    </table>
-    
-    <table class="table">
-        <thead>
-            <tr>
-                
-                <th class="prod">NOME</th>
-                
-                
-        </thead>
-        <?php foreach ($clientes as $cliente): ?>
-        <tr>
-            
-            <td class="descr"><?=$cliente['nome']?></td>
-            <td class="descr"><?=$cliente['email']?></td>
-            <td><a href="./cliente/ver/<?=$cliente['idCliente']?>" class="botao02">Ver</a></td>
-            <td><a href="./cliente/deletar/<?=$cliente['idCliente']?>" class="botao02">Deletar</a></td>"
-            <td><a href="./cliente/editar/<?=$cliente['idCliente']?>" class="botao02">Alterar</a></td>"
-            
-        </tr>
-        <?php endforeach; ?>
-</table>
+
     
     
     
