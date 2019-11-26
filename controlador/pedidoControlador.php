@@ -35,7 +35,7 @@ function salvarpedido() {
 //           redirecionar("login/paginas");
         }
 
-
+        
         exibir("pedido/finalizarpedido", $dados);
     }
 }
@@ -44,21 +44,20 @@ function finalizar() {
     $dados = array();
 
 
-if (ehPost()) {
-    $idFormaP = strip_tags($_POST["idFormaP"]);
-    $idCliente = strip_tags($_POST["idCliente"]);
-    $idendereco = strip_tags($_POST["idendereco"]);
-    $datacompra = strip_tags($_POST["datacompra"]);
+    if (ehPost()) {
+        $idCliente = acessoPegarUsuarioLogado();
+        $idFormaP = strip_tags($_POST["idFormaP"]);
+        $idendereco = strip_tags($_POST["idendereco"]);
 
-    $msg = receberpedido($idCliente, $idendereco, $idFormaP, $datacompra);
-    redirecionar("produto/listarprodutos");
-}
-    else {
-        $dados["formas"] = listarFormaPagamento();
-        $dados["enderecos"] = listarEndereco();
-        $dados["cupons"] = pegarTodosCupons();
+        $idsProdutos = ($_SESSION["carrinho"]);
         
-        exibir("paginas/adicionarproduto", $dados);
+        
+        $msg = receberpedido($idCliente, $idendereco, $idFormaP, $idsProdutos);
+        
+        exibir("pedido/agradecimento");
+    } else {
+        
+        redirecionar("pedido/salvarpedido");
     }
 }
 
@@ -84,5 +83,6 @@ function BuscarPorMunicipio() {
 function visualizar($idPedido) {
     $dados = array();
     $dados['pedido'] = pegarPedidoPorID($idPedido);
+    $dados['pedido2'] = pegarProdutoPorPedido();
     exibir("pedido/visualizar", $dados);
 }

@@ -24,8 +24,8 @@
         <li><a class="lista" href="./pedido/">Listar Pedidos</a></li>
     <?php }?>
 </ul>
-
-<li> <a class="lista" href="./produto/listarprodutos2/"></a></li>
+<a class="lista" href="./cliente/cadastrar/">Cadastro</a>
+ <a class="lista" href="./produto/listarprodutos2/"></a>
 
 <div id="dad">
     <?php foreach ($produtos as $produto): ?>

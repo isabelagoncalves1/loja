@@ -104,10 +104,10 @@ foreign key(idendereco) references endereco (idendereco) on delete cascade on up
 );
 
 CREATE TABLE pedido_produto(
-idproduto int(11) not null,
+idProduto int(11) not null,
 idpedido int(11) not null,
 primary key (idproduto, idpedido), 
-foreign key (idproduto) references produtos (idproduto) on delete cascade on update cascade,
+foreign key (idProduto) references addproduto (idProduto) on delete cascade on update cascade,
 foreign key (idpedido) references pedido (idpedido) on delete cascade on update cascade
 ); 
 

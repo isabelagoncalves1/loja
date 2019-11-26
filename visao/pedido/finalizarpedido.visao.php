@@ -1,4 +1,4 @@
-<form  method="POST" action="pedido/salvarpedido" enctype="multipart/form-data" style="border-bottom: 1px solid #c2e3de;margin-bottom: 20px;border-top: 1px solid #c2e3de;margin-top: 20px;">
+<form  method="POST" action="pedido/finalizar" enctype="multipart/form-data" style="margin-bottom: 20px;border-top: 1px solid #c2e3de;margin-top: 20px;">
 
     <h1 id="h1form">Finalizar pedido</h1>
     <div id="formfinalizar">
@@ -27,23 +27,28 @@
 
     </div>
     <div id="formfinalizar2">
-        <div id="fcupom">
-            <p>Cupons</p>
-
-            <form method="POST" action="">
-                <input type="text" name="desconto" value="">
-                <button type="submit" class="botao05" >Aplicar desconto</button>    
-            </form>
-        </div>
 
 
+
+       
+
+        <button type="submit" class="botao5" >Finalizar</button>
+
+
+    </div>
+</form>
+<form method="POST" action="pedido/salvarpedido" style="border-bottom: 1px solid #c2e3de; margin-bottom: 40px;">
+   
+    <div id="paicupom">
         <div id="precodesconto">
             <p>Preço depois do desconto </p>
             <p class="errop">R$<?php echo $total; ?></p>
         </div>
+        <div id="fcupom">
+            <p>Cupons</p>
 
-        <button type="submit" class="botao5" >Finalizar</button>
-        
-        
-    </div>
-</form>
+
+            <input type="text" name="desconto" value="">
+            <button type="submit" class="botao05" >Aplicar desconto</button>    
+
+        </div>  </div></form>
