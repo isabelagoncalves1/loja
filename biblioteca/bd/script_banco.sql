@@ -94,8 +94,10 @@ CREATE TABLE pedido(
 idpedido int(11) not null auto_increment,
 idCliente integer not null,
 idendereco int(11) not null,
+idFormaP int not null,
 datacompra date not null,
 primary key(idpedido),
 foreign key(idCliente) references cadastrocliente (idCliente) on delete cascade on update cascade,
+foreign key(idFormaP) references formapagamento (idFormaP) on delete cascade on update cascade,
 foreign key(idendereco) references endereco (idendereco) on delete cascade on update cascade
 );

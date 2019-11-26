@@ -1,6 +1,6 @@
 <?php
-function receberpedido($idCliente, $idendereco, $datacompra, $produtos){
-    $sql = "INSERT INTO pedido (idCliente, idendereco, datacompra, produtos) VALUES ('$idCliente', '$idendereco', '$datacompra', '$produtos')";
+function receberpedido($idCliente, $idendereco, $idFormaP, $datacompra){
+    $sql = "INSERT INTO pedido (idCliente, idendereco, idFormaP, datacompra) VALUES ('$idCliente', '$idendereco', '$idFormaP', 'curdate()')";
     $idpedido = mysqli_insert_id($cnx);
     foreach ($idpedido as $idpedidos){
         
@@ -10,6 +10,7 @@ function receberpedido($idCliente, $idendereco, $datacompra, $produtos){
     return '**** cadastrado com sucesso!';
 }
 
+    
 function listarPorMunicipio($cidade){
     $sql = "SELECT p.idPedido, p.datacompra, u.nome AS 'usuario', e.cidade "
             . "FROM pedido p "

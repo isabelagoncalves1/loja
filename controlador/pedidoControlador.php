@@ -12,7 +12,6 @@ function salvarpedido() {
         $dados["enderecos"] = listarEndereco();
         $dados["cupons"] = pegarTodosCupons();
         //dados dos produtos
-
         //$idProduto = $_SESSION["carrinho"];
         $idsProdutos = $_SESSION["carrinho"]; //os IDS do carrinbo!
         $precototal = 0;
@@ -32,16 +31,39 @@ function salvarpedido() {
             $dados["produto"] = $_SESSION["carrinho"];
             $dados["total"] = $total;
             // $dados["cupon"] = $dpsdesconto;
-            
-        } else {          
+        } else {
 //           redirecionar("login/paginas");
         }
+
+
         exibir("pedido/finalizarpedido", $dados);
     }
 }
 
+function finalizar() {
+    $dados = array();
+
+
+if (ehPost()) {
+    $idFormaP = strip_tags($_POST["idFormaP"]);
+    $idCliente = strip_tags($_POST["idCliente"]);
+    $idendereco = strip_tags($_POST["idendereco"]);
+    $datacompra = strip_tags($_POST["datacompra"]);
+
+    $msg = receberpedido($idCliente, $idendereco, $idFormaP, $datacompra);
+    redirecionar("produto/listarprodutos");
+}
+    else {
+        $dados["formas"] = listarFormaPagamento();
+        $dados["enderecos"] = listarEndereco();
+        $dados["cupons"] = pegarTodosCupons();
+        
+        exibir("paginas/adicionarproduto", $dados);
+    }
+}
+
 /** admin */
-function index(){
+function index() {
     $dados = array();
     $dados['enderecos'] = listarEndereco();
     $dados["pedidos"] = listarPedidos();
@@ -49,8 +71,8 @@ function index(){
 }
 
 /** anon */
-function BuscarPorMunicipio(){
-    if(ehPost()){
+function BuscarPorMunicipio() {
+    if (ehPost()) {
         $cidade = $_POST['cidade'];
         $dados = array();
         $dados['pedidos'] = listarPorMunicipio($cidade);
@@ -59,7 +81,7 @@ function BuscarPorMunicipio(){
 }
 
 /** admin */
-function visualizar($idPedido){
+function visualizar($idPedido) {
     $dados = array();
     $dados['pedido'] = pegarPedidoPorID($idPedido);
     exibir("pedido/visualizar", $dados);

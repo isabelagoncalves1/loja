@@ -9,7 +9,7 @@ function comprar($idProduto) {
 /** anon */
 function exibirSession() { # listarCarrinho
     $lista = array();
-    print_r($_SESSION["carrinho"]);
+    
     for ($i = 0; $i < count($_SESSION["carrinho"]); $i++) {
         $idProduto = $_SESSION["carrinho"][$i];
         $produto = pegarProdutoId($idProduto);
