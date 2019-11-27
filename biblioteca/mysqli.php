@@ -17,6 +17,8 @@ function conn() {
     $database = $conx[3];
 
     $cnx = mysqli_connect($serv, $usuario, $senha, $database);
+    
+    
 
     fclose($arq);
 

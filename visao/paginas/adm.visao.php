@@ -31,7 +31,9 @@
                 <td class="descr"><?= $produto['nome'] ?></td>
                 <td class="descr"><?= $produto['preco'] ?></td>
                 <td class="descr"><?= $produto['quant_estoque'] ?></td>
-                <td class="descr"><a href="./produto/ver/<?= $produto['idProduto'] ?>" class="botao02">Ver</a></td>
+                <td class="descr"><a 
+                        
+                        href="./produto/ver/<?= $produto['idProduto'] ?>" class="botao02">Ver</a></td>
                 <td class="descr"><a href="./produto/deletar/<?= $produto['idProduto'] ?>" class="botao02">Deletar</a></td>
                 <td class="descr"><a href="./produto/editar/<?= $produto['idProduto'] ?>" class="botao02">Alterar</a></td>
             </tr>

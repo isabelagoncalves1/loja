@@ -83,6 +83,17 @@ function BuscarPorMunicipio() {
 function visualizar($idPedido) {
     $dados = array();
     $dados['pedido'] = pegarPedidoPorID($idPedido);
-    $dados['pedido2'] = pegarProdutoPorPedido();
+    
     exibir("pedido/visualizar", $dados);
+}
+
+
+function BuscarPorData(){
+    if (ehPost()){
+        $dataInicial = $_POST['dataInicial'];
+        $dataFinal = $_POST['dataFinal'];
+        
+        $dados['pedidos'] = pegarPedidoPorData($dataInicial, $dataFinal);
+        exibir("pedido/pedidoData", $dados);
+    }
 }

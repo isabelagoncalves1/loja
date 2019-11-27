@@ -101,3 +101,30 @@ foreign key(idCliente) references cadastrocliente (idCliente) on delete cascade 
 foreign key(idFormaP) references formapagamento (idFormaP) on delete cascade on update cascade,
 foreign key(idendereco) references endereco (idendereco) on delete cascade on update cascade
 );
+
+CREATE TABLE pedido_produto(
+idProduto int(11) not null,
+idpedido int(11) not null,
+primary key (idproduto, idpedido), 
+foreign key (idProduto) references addproduto (idProduto) on delete cascade on update cascade,
+foreign key (idpedido) references pedido (idpedido) on delete cascade on update cascade
+); 
+
+CREATE TABLE estoque(
+idestoque int(11) not null auto_increment,
+iPproduto int(11) not null,
+qtde int(11) not null,
+primary key(idestoque),
+foreign key(idProduto) references addproduto (idProduto) on delete cascade on update cascade
+);
+
+
+CREATE TABLE log_produto(
+ID_LOG int(11) not null auto_increment,
+TABELA varchar(45) not null,
+USUARIO varchar(45) not null,
+DATA_HORA datetime not null,
+ACAO varchar(45) not null,
+DADOS varchar(1000) not null,
+primary key(ID_LOG)
+);

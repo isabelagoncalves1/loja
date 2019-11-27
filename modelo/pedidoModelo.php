@@ -76,3 +76,15 @@ function pegarProdutoPorPedido() {
 
     return $pedido2;
 }
+
+
+function pegarPedidoPorData($dataInicial, $dataFinal){
+    $sql = "Call sp_PedidoSPorData ('$dataInicial', '$dataFinal')";
+    $resultado = mysqli_query(conn(), $sql);
+    $pedidos = array();
+    while ($linha = mysqli_fetch_assoc($resultado)){
+        $pedidos[] = $linha;
+        
+    }
+    return $pedidos;
+}
